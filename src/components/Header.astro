@@ -1,0 +1,235 @@
+---
+import { css } from 'styled-system/css';
+import { container } from 'styled-system/patterns';
+
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { name: 'Articles', href: '/articles' },
+  { name: 'About', href: '/about' },
+];
+
+const isActive = (href: string) => currentPath.startsWith(href);
+
+const headerStyle = css({
+  position: 'sticky',
+  top: 0,
+  zIndex: 50,
+  bgColor: 'rgba(9, 9, 11, 0.85)',
+  backdropFilter: 'blur(12px)',
+  borderBottom: '1px solid',
+  borderColor: 'cosmos.700',
+});
+
+const navRowStyle = css({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  height: 16,
+});
+
+const logoLinkStyle = css({
+  fontFamily: 'heading',
+  fontSize: '2xl',
+  fontWeight: 'bold',
+  color: 'text.main',
+  letterSpacing: 'tight',
+  display: 'flex',
+  alignItems: 'center',
+  gap: 2,
+});
+
+const desktopNavStyle = css({
+  display: { base: 'none', md: 'flex' },
+  alignItems: 'center',
+  gap: 1,
+});
+
+const desktopNavListStyle = css({
+  display: 'flex',
+  gap: 1,
+  margin: 0,
+  padding: 0,
+  listStyle: 'none',
+});
+
+const desktopNavLinkStyle = (active: boolean) =>
+  css({
+    fontFamily: 'body',
+    fontSize: 'md',
+    fontWeight: 'bold',
+    px: 4,
+    py: 2,
+    borderRadius: 'full',
+    transition: 'all 0.2s ease',
+    color: active ? 'text.main' : 'text.muted',
+    bgColor: active ? 'rgba(255,255,255,0.08)' : 'transparent',
+    _hover: { color: 'text.main', bgColor: 'rgba(255,255,255,0.05)' },
+  });
+
+const actionsContainerStyle = css({
+  display: 'flex',
+  alignItems: 'center',
+  gap: 4,
+});
+
+const mobileToggleStyle = css({
+  display: { base: 'flex', md: 'none' },
+  padding: 2,
+  color: 'text.main',
+});
+
+const mobileDrawerStyle = css({
+  position: 'absolute',
+  top: 16,
+  left: 0,
+  width: '100%',
+  bgColor: 'cosmos.800',
+  borderBottom: '1px solid',
+  borderColor: 'cosmos.700',
+  transform: 'translateY(-100%)',
+  opacity: 0,
+  pointerEvents: 'none',
+  transition: 'all 0.3s ease',
+  display: { base: 'block', lg: 'none' },
+});
+
+const mobileNavListStyle = css({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 4,
+  py: 6,
+  margin: 0,
+  padding: 0,
+  listStyle: 'none',
+});
+
+const mobileNavLinkStyle = (active: boolean) =>
+  css({
+    display: 'block',
+    fontFamily: 'body',
+    fontSize: 'md',
+    fontWeight: 'medium',
+    color: active ? 'text.main' : 'text.muted',
+    transition: 'color 0.2s ease',
+    _hover: { color: 'text.main' },
+  });
+---
+
+<header class={headerStyle}>
+  <div class={container({ px: 6 })}>
+    <div class={navRowStyle}>
+      {/* Logo */}
+      <a href="/" class={logoLinkStyle}>
+        <span class={css({ color: 'accent.blue' })}>✦</span> Cosmo Curated
+      </a>
+
+      {/* Desktop Navigation */}
+      <nav class={desktopNavStyle} aria-label="Primary">
+        <ul class={desktopNavListStyle}>
+          {
+            navLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class={desktopNavLinkStyle(isActive(link.href))}
+                  aria-current={isActive(link.href) ? 'page' : undefined}
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      {/* Mobile Menu Toggle */}
+      <button
+        id="mobile-menu-toggle"
+        aria-label="Open Menu"
+        aria-expanded="false"
+        class={mobileToggleStyle}
+      >
+        <svg
+          id="icon-open"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg
+          id="icon-close"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          style="display:none"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {/* Mobile Navigation Drawer */}
+  <div id="mobile-drawer" class={mobileDrawerStyle}>
+    <nav class={container()}>
+      <ul class={mobileNavListStyle}>
+        {
+          navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class={mobileNavLinkStyle(isActive(link.href))}
+                aria-current={isActive(link.href) ? 'page' : undefined}
+              >
+                {link.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const drawer = document.getElementById('mobile-drawer');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  if (toggle && drawer) {
+    toggle.addEventListener('click', () => {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isExpanded));
+
+      if (!isExpanded) {
+        drawer.style.transform = 'translateY(0)';
+        drawer.style.opacity = '1';
+        drawer.style.pointerEvents = 'auto';
+        iconOpen!.style.display = 'none';
+        iconClose!.style.display = 'block';
+      } else {
+        drawer.style.transform = 'translateY(-100%)';
+        drawer.style.opacity = '0';
+        drawer.style.pointerEvents = 'none';
+        iconOpen!.style.display = 'block';
+        iconClose!.style.display = 'none';
+      }
+    });
+  }
+</script>

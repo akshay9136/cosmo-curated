@@ -1,0 +1,88 @@
+---
+import { css } from 'styled-system/css';
+import { container } from 'styled-system/patterns';
+import { pageDivider } from 'styled-system/recipes';
+
+const currentYear = new Date().getFullYear();
+
+const footerStyle = css({ bgColor: 'cosmos.900', py: 6 });
+
+const mainRowStyle = css({
+  display: 'flex',
+  flexDirection: { base: 'column', md: 'row' },
+  justifyContent: 'space-between',
+  alignItems: { base: 'flex-start', md: 'center' },
+  gap: 6,
+});
+
+const logoLinkStyle = css({
+  fontFamily: 'heading',
+  fontSize: 'xl',
+  fontWeight: 'bold',
+  color: 'text.main',
+  display: 'flex',
+  alignItems: 'center',
+  gap: 2,
+  mb: 2,
+});
+
+const taglineStyle = css({
+  fontFamily: 'body',
+  fontSize: 'sm',
+  color: 'text.muted',
+});
+
+const linksContainerStyle = css({
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 6,
+});
+
+const footerLinkStyle = css({
+  fontFamily: 'body',
+  fontSize: 'sm',
+  color: 'text.muted',
+  transition: 'color 0.2s ease',
+  _hover: { color: 'text.main' },
+});
+
+const copyrightStyle = css({
+  textAlign: { base: 'left', md: 'center' },
+  mt: 8,
+});
+
+const copyrightTextStyle = css({
+  fontFamily: 'body',
+  fontSize: 'xs',
+  color: 'cosmos.600',
+});
+---
+
+<footer class={footerStyle}>
+  <div class={pageDivider()}></div>
+
+  <div class={container({ px: 6 })}>
+    <div class={mainRowStyle}>
+      <div>
+        <a href="/" class={logoLinkStyle}>
+          <span class={css({ color: 'accent.blue' })}>✦</span> Cosmo Curated
+        </a>
+        <p class={taglineStyle}>
+          Exploring the wonders of astrophysics and science.
+        </p>
+      </div>
+
+      <div class={linksContainerStyle}>
+        <a href="/about" class={footerLinkStyle}>About</a>
+        <a href="/privacy" class={footerLinkStyle}>Privacy</a>
+        <a href="/terms" class={footerLinkStyle}>Terms</a>
+      </div>
+    </div>
+
+    <div class={copyrightStyle}>
+      <p class={copyrightTextStyle}>
+        &copy; {currentYear} Cosmo Curated. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

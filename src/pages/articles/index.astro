@@ -1,0 +1,197 @@
+---
+export const prerender = false;
+import Layout from '@layouts/Layout.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import { css, cx } from 'styled-system/css';
+import { section, heading, bodyText, button } from 'styled-system/recipes';
+
+const allArticles = await getCollection('articles');
+
+const categories = [
+  'All Articles',
+  'Stars & Galaxies',
+  'Spacetime & Gravity',
+  'Black Holes',
+  'Cosmology',
+];
+
+// Server-side filtering via URL query param
+const selected = Astro.url.searchParams.get('category') ?? null;
+
+const filteredArticles = allArticles
+  .filter((article) => {
+    if (!selected) return true;
+    return article.data.category === selected;
+  })
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+
+const sectionStyle = cx(section(), css({ py: 20, bgColor: 'cosmos.900' }));
+
+const headingStyle = cx(heading({ size: 'h1' }), css({ mb: 4 }));
+
+const subtitleStyle = cx(
+  bodyText({ size: 'lg' }),
+  css({ maxW: 'xl', mx: 'auto', color: 'cosmos.300' }),
+);
+
+const filterBarStyle = css({
+  display: 'flex',
+  gap: 3,
+  justifyContent: 'center',
+  flexWrap: 'wrap',
+  mt: 6,
+});
+
+const filterLinkBase = {
+  px: 4,
+  py: 2,
+  borderRadius: 'full',
+  fontSize: 'sm',
+  fontWeight: 500,
+  cursor: 'pointer',
+  transition: 'all 0.25s ease',
+  border: '1px solid',
+  textDecoration: 'none',
+  display: 'inline-block',
+};
+
+const filterLinkActiveStyle = css({
+  ...filterLinkBase,
+  bgColor: 'text.main',
+  color: 'cosmos.900',
+  borderColor: 'text.main',
+  fontWeight: 600,
+});
+
+const filterLinkInactiveStyle = css({
+  ...filterLinkBase,
+  bgColor: 'cosmos.800',
+  color: 'text.muted',
+  borderColor: 'cosmos.700',
+  _hover: {
+    borderColor: 'cosmos.600',
+    color: 'text.main',
+  },
+});
+
+const articlesGridStyle = css({
+  display: 'grid',
+  gap: 6,
+  gridTemplateColumns: {
+    base: '1fr',
+    md: 'repeat(2, 1fr)',
+    lg: 'repeat(3, 1fr)',
+  },
+});
+
+const emptyStateStyle = css({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  py: 20,
+  textAlign: 'center',
+});
+
+const emptyIconStyle = css({
+  width: 16,
+  height: 16,
+  borderRadius: 'full',
+  bgColor: 'rgba(255, 255, 255, 0.05)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: 'cosmos.300',
+  mb: 4,
+});
+
+const emptyTitleStyle = cx(heading({ size: 'h3' }), css({ mb: 2 }));
+
+const emptyDescStyle = cx(bodyText(), css({ mb: 6, maxW: 'md' }));
+---
+
+<Layout title="Articles | Cosmo Curated">
+  <section class={sectionStyle}>
+    <div class={css({ mb: 12, textAlign: 'center' })}>
+      <h1 class={headingStyle}>Explore</h1>
+
+      <p class={subtitleStyle}>
+        Dive into our collection of handpicked essays on the science that
+        actually changes how you see the universe.
+      </p>
+
+      {/* Category Filter Pills — server-rendered links, zero JS */}
+      <nav aria-label="Filter articles by category" class={filterBarStyle}>
+        {
+          categories.map((cat) => {
+            const isAll = cat === 'All Articles';
+            const href = isAll
+              ? '/articles'
+              : `/articles?category=${encodeURIComponent(cat)}`;
+            const isActive = isAll ? !selected : selected === cat;
+            return (
+              <a
+                href={href}
+                class={
+                  isActive ? filterLinkActiveStyle : filterLinkInactiveStyle
+                }
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {cat}
+              </a>
+            );
+          })
+        }
+      </nav>
+    </div>
+
+    {/* Articles Grid — filtered server-side */}
+    {
+      filteredArticles.length > 0 ? (
+        <div class={articlesGridStyle}>
+          {filteredArticles.map((article) => (
+            <ArticleCard
+              id={article.id}
+              title={article.data.title}
+              description={article.data.description}
+              category={article.data.category}
+              heroImage={article.data.heroImage}
+              publishedAt={article.data.publishedAt}
+              hashtags={article.data.hashtags}
+            />
+          ))}
+        </div>
+      ) : (
+        <div class={emptyStateStyle}>
+          <div class={emptyIconStyle}>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </div>
+
+          <h3 class={emptyTitleStyle}>No articles found</h3>
+
+          <p class={emptyDescStyle}>
+            There are currently no articles published under this category. Check
+            back soon for new cosmic insights!
+          </p>
+
+          <a href="/articles" class={button({ variant: 'secondary' })}>
+            Show All Articles
+          </a>
+        </div>
+      )
+    }
+  </section>
+</Layout>

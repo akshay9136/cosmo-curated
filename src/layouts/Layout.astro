@@ -1,0 +1,71 @@
+---
+import '@/index.css';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import { css } from 'styled-system/css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = 'Cosmo Curated',
+  description = 'Handpicked deep dives into astrophysics, cosmology, and the science of the universe.',
+  image = '/cosmo_bg.jpg',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const bodyStyle = css({
+  bgColor: 'cosmos.900',
+  color: 'text.main',
+  fontFamily: 'body',
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+});
+
+const mainStyle = css({
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:site_name" content="Cosmo Curated" />
+
+    <title>{title}</title>
+  </head>
+  <body class={bodyStyle}>
+    <Header />
+    <main class={mainStyle}>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

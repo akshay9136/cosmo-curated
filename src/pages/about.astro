@@ -1,0 +1,106 @@
+---
+export const prerender = true;
+import Layout from '@layouts/Layout.astro';
+import { css, cx } from 'styled-system/css';
+import { container } from 'styled-system/patterns';
+import { section, heading, bodyText, button } from 'styled-system/recipes';
+
+const sectionStyle = cx(section(), css({ py: 16, bgColor: 'cosmos.900' }));
+
+const contentStyle = css({
+  maxW: '3xl',
+  mx: 'auto',
+  textAlign: 'center',
+});
+
+const titleStyle = cx(heading({ size: 'h1' }), css({ mb: 6 }));
+
+const subtitleStyle = cx(
+  bodyText({ size: 'lg' }),
+  css({ mb: 8, color: 'cosmos.300' }),
+);
+
+const bodyBlockStyle = css({
+  textAlign: 'left',
+  mt: 16,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 10,
+});
+
+const cardStyle = css({
+  p: 6,
+  borderRadius: 'xl',
+  bgColor: 'rgba(255,255,255,0.03)',
+  border: '1px solid',
+  borderColor: 'rgba(255,255,255,0.07)',
+});
+
+const cardTitleStyle = cx(heading({ size: 'h3' }), css({ mb: 3 }));
+const cardBodyStyle = bodyText();
+
+const ctaRowStyle = css({
+  display: 'flex',
+  gap: 4,
+  justifyContent: 'center',
+  flexWrap: 'wrap',
+  mt: 12,
+});
+---
+
+<Layout title="About | Cosmo Curated">
+  <section class={sectionStyle}>
+    <div class={container()}>
+      <div class={contentStyle}>
+        <h1 class={titleStyle}>About Us</h1>
+        <p class={subtitleStyle}>
+          A curated editorial platform bringing you handpicked deep dives
+          into astrophysics, cosmology, and the science of the universe.
+        </p>
+
+        <div class={bodyBlockStyle}>
+          <div class={cardStyle}>
+            <h2 class={cardTitleStyle}>Our Mission</h2>
+            <p class={cardBodyStyle}>
+              The universe is staggeringly complex — but its story doesn't have
+              to be impenetrable. Cosmo Curated translates cutting-edge
+              research, decades of astrophysics, and the deepest questions
+              humanity has ever asked into clear, visual, human writing.
+            </p>
+          </div>
+
+          <div class={cardStyle}>
+            <h2 class={cardTitleStyle}>What We Cover</h2>
+            <p class={cardBodyStyle}>
+              From the life cycles of stars and the anatomy of black holes, to
+              the warping of spacetime and the large-scale structure of the
+              cosmos — we explore the phenomena that define reality at its most
+              fundamental level.
+            </p>
+          </div>
+
+          <div class={cardStyle}>
+            <h2 class={cardTitleStyle}>Who We Are</h2>
+            <p class={cardBodyStyle}>
+              Cosmo Curated is an independent editorial project driven by a
+              belief that quality beats quantity. We'd rather publish one
+              exceptional essay than a hundred forgettable ones.
+            </p>
+          </div>
+        </div>
+
+        <div class={ctaRowStyle}>
+          <a
+            href="/articles"
+            class={button({ variant: 'primary', size: 'lg' })}
+          >
+            Start Reading
+          </a>
+          <a href="/" class={button({ variant: 'secondary', size: 'lg' })}>
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,225 @@
+---
+export const prerender = true;
+import Layout from '@layouts/Layout.astro';
+import CategoryCard from '@components/CategoryCard.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import { css, cx } from 'styled-system/css';
+import { container } from 'styled-system/patterns';
+import {
+  section,
+  heading,
+  bodyText,
+  button,
+  pageDivider,
+} from 'styled-system/recipes';
+
+const allArticles = await getCollection('articles');
+const featuredArticles = allArticles
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+  .slice(0, 3);
+
+// Custom animations using Panda CSS
+const fadeUpClass = 'fade-up-anim';
+
+const categories = [
+  {
+    title: 'Stars & Galaxies',
+    description:
+      'Discover the lifecycles of stars, stellar nurseries, and the colossal structures they form.',
+  },
+  {
+    title: 'Spacetime & Gravity',
+    description:
+      'Understand how mass warps the very structure and temporal flow of the universe.',
+  },
+  {
+    title: 'Black Holes',
+    description:
+      'Explore the regions of spacetime where gravity is so strong that nothing can escape.',
+  },
+  {
+    title: 'Cosmology',
+    description:
+      'Listen to the echo of the Big Bang and decode the large-scale evolution of the universe.',
+  },
+];
+
+// --- Hero Section Styles ---
+const heroStyles = {
+  section: css({
+    position: 'relative',
+    overflow: 'hidden',
+    minHeight: { base: '80vh', md: '88vh' },
+    display: 'flex',
+    alignItems: 'center',
+    pt: { base: 12, md: 16 },
+    pb: { base: 16, md: 24 },
+  }),
+
+  background: css({ position: 'absolute', inset: 0, zIndex: 0 }),
+
+  gradientTop: css({
+    position: 'absolute',
+    inset: 0,
+    background:
+      'linear-gradient(to top, rgba(9,9,11,1) 0%, rgba(9,9,11,0.4) 30%, transparent 70%)',
+    zIndex: 1,
+  }),
+
+  image: css({
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    objectPosition: 'center right',
+    opacity: 0.75,
+  }),
+
+  content: container({ maxW: '3xl', px: 6, zIndex: 10 }),
+
+  title: cx(
+    heading({ size: 'h1' }),
+    fadeUpClass,
+    css({ mb: 6, lineHeight: 1.15 }),
+  ),
+
+  subtitle: cx(
+    bodyText({ size: 'lg' }),
+    fadeUpClass,
+    css({ mb: 8, maxW: 'xl', fontSize: { base: 'md', md: 'lg' } }),
+  ),
+
+  actions: cx(fadeUpClass, css({ display: 'flex', gap: 3, flexWrap: 'wrap' })),
+};
+
+const sectionContainerStyle = cx(
+  section(),
+  css({ bgColor: 'cosmos.900', position: 'relative', zIndex: 10 }),
+);
+
+const topicsGridStyle = css({
+  display: 'grid',
+  gap: 6,
+  gridTemplateColumns: {
+    base: '1fr',
+    md: 'repeat(2, 1fr)',
+    lg: 'repeat(4, 1fr)',
+  },
+});
+
+const articlesGridStyle = css({
+  display: 'grid',
+  gap: 6,
+  gridTemplateColumns: {
+    base: '1fr',
+    md: 'repeat(2, 1fr)',
+    lg: 'repeat(3, 1fr)',
+  },
+});
+---
+
+<style is:global>
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fade-up-anim {
+    animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+  }
+</style>
+
+<Layout title="Cosmo Curated | Astrophysics & Science">
+  {/* Hero Section */}
+  <section class={heroStyles.section}>
+    {/* Background Image & Gradient Overlays */}
+    <div class={heroStyles.background}>
+      <div class={heroStyles.gradientTop}></div>
+      <img
+        src="/cosmo_bg.jpg"
+        alt="Cosmo Curated Hero"
+        class={heroStyles.image}
+      />
+    </div>
+
+    <div class={heroStyles.content}>
+      <h1 class={heroStyles.title} style="animation-delay: 0.2s">
+        Curated from
+        <br />
+        <span
+          class={css({
+            color: 'accent.blue',
+            textShadow: '0 0 30px rgba(0,242,254,0.3)',
+          })}
+        >
+          the Cosmos
+        </span>
+      </h1>
+
+      <p class={heroStyles.subtitle} style="animation-delay: 0.3s">
+        Hand-picked essays, visual guides, and deep dives into astrophysics —
+        curated from the cutting edge of what we know about the universe.
+      </p>
+
+      <div class={heroStyles.actions} style="animation-delay: 0.4s">
+        <a href="/articles" class={button({ variant: 'primary', size: 'lg' })}>
+          Start Exploring
+        </a>
+        <a href="/about" class={button({ variant: 'secondary', size: 'lg' })}>
+          About Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Topics Grid */}
+  <section class={sectionContainerStyle}>
+    <div class={css({ mb: 10 })}>
+      <h2 class={heading({ size: 'h2' })}>Explore by Topic</h2>
+      <p class={bodyText()}>
+        Curated collections across the fundamental phenomena that shape space
+        and time.
+      </p>
+    </div>
+    <div class={topicsGridStyle}>
+      {categories.map((cat) => <CategoryCard {...cat} />)}
+    </div>
+  </section>
+
+  <div class={pageDivider()}></div>
+
+  {/* Featured Articles */}
+  {
+    featuredArticles.length > 0 && (
+      <section class={sectionContainerStyle}>
+        <div class={css({ mb: 10 })}>
+          <h2 class={heading({ size: 'h2' })}>Latest Deep Dives</h2>
+          <p class={bodyText()}>
+            Handpicked essays unpacking the most profound questions in physics
+            and cosmology.
+          </p>
+        </div>
+
+        <div class={articlesGridStyle}>
+          {featuredArticles.map((article) => (
+            <ArticleCard
+              id={article.id}
+              title={article.data.title}
+              description={article.data.description}
+              category={article.data.category}
+              heroImage={article.data.heroImage}
+              publishedAt={article.data.publishedAt}
+              hashtags={article.data.hashtags}
+            />
+          ))}
+        </div>
+      </section>
+    )
+  }
+</Layout>
