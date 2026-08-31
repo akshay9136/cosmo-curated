@@ -50,9 +50,10 @@ const heroStyles = {
   section: css({
     position: 'relative',
     overflow: 'hidden',
-    minHeight: { base: '80vh', md: '88vh' },
+    minHeight: '90vh',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'flex-start',
     pt: { base: 12, md: 16 },
     pb: { base: 16, md: 24 },
   }),
@@ -62,8 +63,10 @@ const heroStyles = {
   gradientTop: css({
     position: 'absolute',
     inset: 0,
-    background:
-      'linear-gradient(to top, rgba(9,9,11,1) 0%, rgba(9,9,11,0.4) 30%, transparent 70%)',
+    background: {
+      base: 'linear-gradient(to top, rgba(9,9,11,1) 0%, rgba(9,9,11,0.4) 50%, transparent 70%)',
+      lg: 'linear-gradient(to top, rgba(9,9,11,1) 0%, rgba(9,9,11,0.4) 30%, transparent 50%)',
+    },
     zIndex: 1,
   }),
 
@@ -75,7 +78,11 @@ const heroStyles = {
     opacity: 0.75,
   }),
 
-  content: container({ maxW: '3xl', px: 6, zIndex: 10 }),
+  content: container({
+    width: '5xl',
+    px: { base: 6, md: 10 },
+    zIndex: 10,
+  }),
 
   title: cx(
     heading({ size: 'h1' }),
@@ -154,7 +161,7 @@ const articlesGridStyle = css({
         <br />
         <span
           class={css({
-            color: 'accent.blue',
+            color: 'accent.purple',
             textShadow: '0 0 30px rgba(0,242,254,0.3)',
           })}
         >

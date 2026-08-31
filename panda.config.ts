@@ -17,10 +17,10 @@ export default defineConfig({
             200: { value: '#e4e4e7' },
           },
           accent: {
-            blue: { value: '#00f2fe' }, // Electric Cyan
-            purple: { value: '#8b5cf6' }, // Electric Purple
-            gold: { value: '#eab308' }, // Vibrant Yellow
-            pink: { value: '#d946ef' }, // Fuchsia
+            blue: { value: '#4fc3f7' },   // Stellar Blue
+            purple: { value: '#b57bee' }, // Vivid Violet
+            gold: { value: '#f9a825' },   // Warm Amber
+            pink: { value: '#f06292' },   // Cosmic Rose
           },
           text: {
             main: { value: '#fafafa' },
