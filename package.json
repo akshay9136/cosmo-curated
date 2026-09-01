@@ -13,6 +13,7 @@
     "prepare": "panda codegen"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "@astrojs/vercel": "^11.0.8",
     "astro": "^7.2.2"
   },

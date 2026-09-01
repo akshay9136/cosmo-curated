@@ -15,6 +15,19 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props;
+const {
+  title,
+  description,
+  category,
+  heroImage,
+  hashtags = [],
+  publishedAt,
+  updatedAt,
+  author = 'Cosmo Curated Editorial',
+  readingTime: articleReadingTime,
+  seoKeywords = [],
+  faqs,
+} = article.data;
 
 // Render markdown content
 let Content;
@@ -26,15 +39,113 @@ if (typeof render === 'function') {
   Content = rendered.Content;
 }
 
-const backButtonStyle = css({
+// --- Reading time (auto-derive: ~240 wpm average) ---
+const wordCount = (article.body ?? '').trim().split(/\s+/).length;
+const readingTime =
+  articleReadingTime ?? Math.max(1, Math.round(wordCount / 240));
+
+// --- JSON-LD: Article schema ---
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: heroImage ? new URL(heroImage, Astro.site).toString() : undefined,
+  datePublished: publishedAt.toISOString(),
+  dateModified: (updatedAt ?? publishedAt).toISOString(),
+  author: {
+    '@type': 'Person',
+    name: author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Cosmo Curated',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${Astro.site}favicon.svg`,
+    },
+  },
+  url: new URL(`/articles/${article.id}`, Astro.site).toString(),
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': new URL(`/articles/${article.id}`, Astro.site).toString(),
+  },
+  keywords: [...hashtags, ...seoKeywords].join(', '),
+  articleSection: category,
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['article h1', 'article .article-description'],
+  },
+  timeRequired: `PT${readingTime}M`,
+};
+
+// --- JSON-LD: BreadcrumbList ---
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: Astro.site?.toString(),
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Articles',
+      item: new URL('/articles', Astro.site).toString(),
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: title,
+      item: new URL(`/articles/${article.id}`, Astro.site).toString(),
+    },
+  ],
+};
+
+// --- JSON-LD: FAQPage (if faqs present) ---
+const faqSchema =
+  faqs && faqs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
+
+const schemas = [
+  articleSchema,
+  breadcrumbSchema,
+  ...(faqSchema ? [faqSchema] : []),
+];
+
+const breadcrumbStyle = css({
   mb: 8,
-  display: 'inline-flex',
+  display: 'flex',
   alignItems: 'center',
   gap: 2,
-  color: 'text.muted',
   fontSize: 'sm',
-  transition: 'color 0.2s ease',
-  _hover: { color: 'text.main' },
+  color: 'cosmos.600',
+  flexWrap: 'wrap',
+
+  '& > a': {
+    color: 'text.muted',
+    _hover: { color: 'text.main' },
+    transition: 'color 0.2s',
+  },
+
+  '& > span': {
+    color: 'cosmos.200',
+  },
 });
 
 const metaRowStyle = css({
@@ -45,14 +156,12 @@ const metaRowStyle = css({
   mb: 4,
 });
 
-const dateTextStyle = css({
+const readTimeStyle = css({
   color: 'cosmos.300',
   fontSize: 'sm',
-});
-
-const updatedTextStyle = css({
-  color: 'cosmos.600',
-  fontSize: 'xs',
+  display: 'flex',
+  alignItems: 'center',
+  gap: 1,
 });
 
 const titleStyle = cx(heading({ size: 'h2' }), css({ mb: 4 }));
@@ -196,73 +305,85 @@ const tagsContainerStyle = css({
 });
 ---
 
-<Layout title={`${article.data.title} | Cosmo Curated`}>
+<Layout
+  title={`${title} | Cosmo Curated`}
+  description={description}
+  image={heroImage}
+  type="article"
+  publishedAt={publishedAt}
+  updatedAt={updatedAt}
+  author={author}
+  keywords={[...hashtags, ...seoKeywords]}
+  schemas={schemas}
+>
   <article class={section()}>
     <div class={container({ maxW: '4xl', px: 0 })}>
-      {/* Back button */}
-      <a href="/articles" class={backButtonStyle}>
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M19 12H5M12 19l-7-7 7-7"></path>
-        </svg>
-        Back to Articles
-      </a>
+      {/* Breadcrumb nav */}
+      <nav aria-label="Breadcrumb" class={breadcrumbStyle}>
+        <a href="/">Home</a>
+        <span aria-hidden="true">{'>'}</span>
+        <a href="/articles">Articles</a>
+        <span aria-hidden="true">{'>'}</span>
+        <span aria-current="page">{title}</span>
+      </nav>
 
       {/* Header / Meta */}
       <div class={css({ mb: 8 })}>
         <div class={metaRowStyle}>
           <span class={badge({ variant: 'accent' })}>
-            {article.data.category}
+            {category}
           </span>
-          <span class={dateTextStyle}>
+          <span class={css({ color: 'cosmos.300', fontSize: 'sm' })}>
             {
-              article.data.publishedAt.toLocaleDateString('en-US', {
+              publishedAt.toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
               })
             }
           </span>
-          {
-            article.data.updatedAt && (
-              <span class={updatedTextStyle}>
-                (Updated:{' '}
-                {article.data.updatedAt.toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'short',
-                  day: 'numeric',
-                })}
-                )
-              </span>
-            )
-          }
+
+          {/* Reading time */}
+          <span class={readTimeStyle}>
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="10"></circle><polyline
+                points="12 6 12 12 16 14"></polyline>
+            </svg>
+            {readingTime} min read
+          </span>
         </div>
 
         <h1 class={titleStyle}>
-          {article.data.title}
+          {title}
         </h1>
 
-        <p class={bodyText({ size: 'lg' })}>
-          {article.data.description}
+        <p class={cx(bodyText({ size: 'lg' }), 'article-description')}>
+          {description}
         </p>
       </div>
 
       {/* Hero Image */}
       {
-        article.data.heroImage && (
+        heroImage && (
           <div class={heroImageWrapperStyle}>
             <img
-              src={article.data.heroImage}
-              alt={article.data.title}
+              src={heroImage}
+              alt={title}
               class={heroImageStyle}
+              width="1200"
+              height="480"
+              fetchpriority="high"
+              loading="eager"
             />
           </div>
         )
@@ -275,9 +396,9 @@ const tagsContainerStyle = css({
 
       {/* Hashtags */}
       {
-        article.data.hashtags && (
+        hashtags && hashtags.length > 0 && (
           <div class={tagsContainerStyle}>
-            {article.data.hashtags.map((tag) => (
+            {hashtags.map((tag) => (
               <span class={badge({ variant: 'default' })}>#{tag}</span>
             ))}
           </div>

@@ -2,21 +2,70 @@
 import '@/index.css';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import JsonLd from '@components/JsonLd.astro';
 import { css } from 'styled-system/css';
 
 interface Props {
   title?: string;
   description?: string;
   image?: string;
+  /** Page type — controls og:type and article:* meta tags */
+  type?: 'website' | 'article';
+  publishedAt?: Date;
+  updatedAt?: Date;
+  author?: string;
+  keywords?: string[];
+  /** Additional JSON-LD schemas to inject (e.g. Article, BreadcrumbList) */
+  schemas?: Record<string, unknown>[];
 }
 
 const {
   title = 'Cosmo Curated',
   description = 'Handpicked deep dives into astrophysics, cosmology, and the science of the universe.',
   image = '/cosmo_bg.jpg',
+  type = 'website',
+  publishedAt,
+  updatedAt,
+  author = 'Cosmo Curated Editorial',
+  keywords = [],
+  schemas = [],
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(image, Astro.site).toString();
+
+// --- WebSite schema (on every page) ---
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Cosmo Curated',
+  url: Astro.site?.toString() ?? 'https://cosmocurated.com',
+  description:
+    'Handpicked deep dives into astrophysics, cosmology, and the science of the universe.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${Astro.site}articles?category={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+// --- Organization schema (on every page — entity authority for AEO) ---
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Cosmo Curated',
+  url: Astro.site?.toString() ?? 'https://cosmocurated.com',
+  logo: {
+    '@type': 'ImageObject',
+    url: `${Astro.site}favicon.svg`,
+  },
+  sameAs: [],
+};
+
+const allSchemas = [websiteSchema, orgSchema, ...schemas];
 
 const bodyStyle = css({
   bgColor: 'cosmos.900',
@@ -38,10 +87,16 @@ const mainStyle = css({
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary meta -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+    <meta name="author" content={author} />
+    <meta name="robots" content="index, follow" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,14 +107,32 @@ const mainStyle = css({
     />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Cosmo Curated" />
+    <meta property="og:locale" content="en_US" />
 
-    <title>{title}</title>
+    <!-- Article-specific Open Graph -->
+    {
+      type === 'article' && publishedAt && (
+        <>
+          <meta
+            property="article:published_time"
+            content={publishedAt.toISOString()}
+          />
+          <meta property="article:author" content={author} />
+          <meta property="article:section" content="Astrophysics" />
+        </>
+      )
+    }
+
+    <!-- JSON-LD Structured Data -->
+    {allSchemas.map((s) => <JsonLd schema={s} />)}
   </head>
   <body class={bodyStyle}>
     <Header />

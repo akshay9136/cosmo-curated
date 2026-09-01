@@ -5,6 +5,19 @@ category: 'Spacetime & Gravity'
 heroImage: '/images/the-equivalence-0.jpeg'
 hashtags: ['Einstein', 'Gravity', 'Relativity', 'Equivalence Principle', 'Physics']
 publishedAt: 2026-08-20
+author: 'Cosmo Curated Editorial'
+seoKeywords: ['equivalence principle explained', 'why do astronauts feel weightless', 'gravity and acceleration same', 'does gravity slow time', 'gravitational lensing explained']
+faqs:
+  - question: 'What is the Equivalence Principle?'
+    answer: 'The Equivalence Principle, formulated by Einstein in 1907, states that the effects of gravity are locally indistinguishable from the effects of acceleration. This means that inside a small enough room, no experiment can tell you whether you are sitting still on Earth or accelerating through space in a rocket at 9.8 m/s². This insight became the conceptual foundation of Einstein''s General Theory of Relativity.'
+  - question: 'Why do astronauts feel weightless in orbit?'
+    answer: 'Astronauts in orbit feel weightless because they are in continuous free fall. The International Space Station and everything inside it — including the astronauts — are all falling toward Earth at exactly the same rate. Since there is no relative difference in how fast they and the station fall, they experience weightlessness. Earth''s gravity is still pulling on them strongly; they are simply falling around the planet fast enough to keep missing it.'
+  - question: 'Does gravity bend light?'
+    answer: 'Yes. Because gravity is locally equivalent to acceleration, and acceleration bends the path of light, gravity must also bend light. This was dramatically confirmed in 1919 when astronomers observed starlight being deflected by the Sun''s gravity during a solar eclipse, exactly as General Relativity predicted. Today, gravitational lensing — the bending of light by massive objects — is a standard tool in astronomy and cosmology.'
+  - question: 'Does gravity slow down time?'
+    answer: 'Yes. This is gravitational time dilation. Clocks tick more slowly in stronger gravitational fields. A clock at sea level ticks slightly slower than one on a mountain top. Near a black hole, the effect becomes extreme. This is not a trick of instrumentation — it is real time itself running at different rates. GPS satellites must correct for this effect (along with time dilation from their orbital speed) or they would produce position errors of several kilometres per day.'
+  - question: 'What is the difference between the Equivalence Principle and General Relativity?'
+    answer: 'The Equivalence Principle states the local equivalence of gravity and acceleration — it is an observation about what happens in a small region. General Relativity is the full mathematical theory that extends this insight globally, describing gravity as the curvature of spacetime caused by mass and energy. The Equivalence Principle is the conceptual seed; General Relativity is the complete geometric theory that grew from it.'
 ---
 
 Imagine you wake up inside a windowless room — a sealed box with no way to see outside. The floor pushes against your feet. Objects fall when you drop them. Everything feels perfectly normal.

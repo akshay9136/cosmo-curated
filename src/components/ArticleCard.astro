@@ -69,7 +69,7 @@ const metaRowStyle = css({
 });
 
 const dateStyle = css({
-  color: 'cosmos.600',
+  color: 'cosmos.400',
   fontSize: 'xs',
   fontWeight: 500,
 });
@@ -115,7 +115,14 @@ const tagStyle = css({
   {
     heroImage ? (
       <div class={imageWrapperStyle}>
-        <img src={heroImage} alt={title} class={imageStyle} />
+        <img
+          src={heroImage}
+          alt={title}
+          class={imageStyle}
+          width="600"
+          height="200"
+          loading="lazy"
+        />
       </div>
     ) : (
       <div class={imagePlaceholderStyle} />

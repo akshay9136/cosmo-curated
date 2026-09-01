@@ -8,6 +8,23 @@ import { section, heading, bodyText, button } from 'styled-system/recipes';
 
 const allArticles = await getCollection('articles');
 
+// --- CollectionPage JSON-LD ---
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Astrophysics Articles | Cosmo Curated',
+  description:
+    'A curated collection of in-depth essays on astrophysics, cosmology, spacetime, black holes, and the science of the universe.',
+  url: new URL('/articles', Astro.site).toString(),
+  hasPart: allArticles.map((a) => ({
+    '@type': 'Article',
+    headline: a.data.title,
+    url: new URL(`/articles/${a.id}`, Astro.site).toString(),
+    datePublished: a.data.publishedAt.toISOString(),
+    description: a.data.description,
+  })),
+};
+
 const categories = [
   'All Articles',
   'Stars & Galaxies',
@@ -47,7 +64,7 @@ const filterLinkBase = {
   px: 4,
   py: 2,
   borderRadius: 'full',
-  fontSize: 'sm',
+  fontSize: 'md',
   fontWeight: 500,
   cursor: 'pointer',
   transition: 'all 0.25s ease',
@@ -111,7 +128,11 @@ const emptyTitleStyle = cx(heading({ size: 'h3' }), css({ mb: 2 }));
 const emptyDescStyle = cx(bodyText(), css({ mb: 6, maxW: 'md' }));
 ---
 
-<Layout title="Articles | Cosmo Curated">
+<Layout
+  title="Astrophysics Articles | Cosmo Curated"
+  description="A curated collection of in-depth essays on astrophysics, cosmology, spacetime, black holes, and the science of the universe."
+  schemas={[collectionSchema]}
+>
   <section class={sectionStyle}>
     <div class={css({ mb: 12, textAlign: 'center' })}>
       <h1 class={headingStyle}>Explore</h1>
