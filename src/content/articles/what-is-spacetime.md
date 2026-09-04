@@ -40,7 +40,7 @@ This is the essence of spacetime: any event in the universe can be pinpointed by
 
 ---
 
-## Newton's Universe: Space and Time as Separate Absolutes
+## Newton's Universe: Space and Time are Separate
 
 For most of history, scientists — including Isaac Newton — treated space and time as completely independent and fixed. In Newton's worldview:
 

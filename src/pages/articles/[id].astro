@@ -211,13 +211,18 @@ const markdownContentStyle = css({
     color: 'text.main',
   },
   '& p': { mb: 6, color: 'cosmos.300' },
-  '& ul': { mb: 6, pl: 6, color: 'cosmos.300' },
-  '& ol': {
-    mb: 6,
-    pl: 6,
-    listStyleType: 'decimal',
-    color: 'cosmos.300',
+  '& a': {
+    color: 'accent.blue',
+    textDecoration: 'underline',
+    textUnderlineOffset: 4,
+    transition: 'color 0.2s, text-decoration-color 0.2s',
+    _hover: {
+      color: 'accent.purple',
+      textDecorationColor: 'accent.purple',
+    },
   },
+  '& ul': { mb: 6, pl: 6, listStyleType: 'disc', color: 'cosmos.300' },
+  '& ol': { mb: 6, pl: 6, listStyleType: 'decimal', color: 'cosmos.300' },
   '& li': { mb: 2 },
   '& blockquote': {
     borderLeft: '4px solid',
