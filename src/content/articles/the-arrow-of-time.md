@@ -72,6 +72,8 @@ The irreversibility of entropy has been formalised as one of the most fundamenta
 
 The Second Law is where the Arrow of Time enters physics. Because entropy always increases in one direction of time, it gives us a way to distinguish the past from the future: **the past is the direction of lower entropy; the future is the direction of higher entropy.**
 
+![Entropy increasing over time](/images/arrow-of-time-2.jpeg)
+
 This is why:
 
 - **Eggs break but don't reassemble.** A whole egg is a highly organised, low-entropy object. A smashed egg is disordered: high entropy. The transition from low to high entropy is overwhelmingly probable. The reverse is overwhelmingly improbable.
@@ -103,7 +105,7 @@ Think about it this way. If you woke up with no memory of the last hour, and you
 
 Follow this logic all the way back, and you reach the Big Bang: a state of the universe that must have been extraordinarily, almost incomprehensibly, low in entropy.
 
-![Entropy of the universe over time](/images/arrow-of-time-2.jpeg)
+![Entropy of the universe over time](/images/arrow-of-time-3.jpeg)
 
 The early universe was not simply hot and dense — it was *highly ordered*. Energy and matter were distributed in a very specific, smooth, low-entropy configuration. From that special starting point, the universe has been unfolding in the direction of increasing entropy ever since — producing stars, galaxies, planets, life, and eventually the dispersal of all structure.
 
