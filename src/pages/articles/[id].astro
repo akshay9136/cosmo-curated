@@ -210,7 +210,7 @@ const markdownContentStyle = css({
     mb: 3,
     color: 'text.main',
   },
-  '& p': { mb: 6, color: 'cosmos.300' },
+  '& p': { mb: 4, color: 'cosmos.300', textAlign: 'justify' },
   '& a': {
     color: 'accent.blue',
     textDecoration: 'underline',
@@ -221,8 +221,8 @@ const markdownContentStyle = css({
       textDecorationColor: 'accent.purple',
     },
   },
-  '& ul': { mb: 6, pl: 6, listStyleType: 'disc', color: 'cosmos.300' },
-  '& ol': { mb: 6, pl: 6, listStyleType: 'decimal', color: 'cosmos.300' },
+  '& ul': { mb: 4, pl: 6, listStyleType: 'disc', color: 'cosmos.300' },
+  '& ol': { mb: 4, pl: 6, listStyleType: 'decimal', color: 'cosmos.300' },
   '& li': { mb: 2 },
   '& blockquote': {
     borderLeft: '4px solid',
@@ -274,8 +274,6 @@ const markdownContentStyle = css({
   '& th': {
     bgColor: 'cosmos.800',
     color: 'text.main',
-    fontWeight: 'bold',
-    fontFamily: 'heading',
     textAlign: 'left',
     px: 6,
     py: 4,

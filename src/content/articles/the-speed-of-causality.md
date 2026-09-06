@@ -56,7 +56,7 @@ Light travels at this speed because photons — the particles of light — have 
 
 Think of it this way: the universe has a cosmic speed limit posted on every stretch of spacetime. Light happens to be the vehicle that always drives at exactly that limit. But the limit itself would exist even in a universe with no light at all.
 
-> 💡 **Photon**: a particle of light with zero mass and zero electric charge. Because it is massless, it must travel at exactly the universal speed limit — no more, no less.
+> 💡 **Photon** is a particle of light with zero mass and zero electric charge. Because it is massless, it must travel at exactly the universal speed limit — no more, no less.
 
 ---
 
@@ -66,7 +66,7 @@ To understand why there must be a speed limit at all, we need to think carefully
 
 Suppose you are on a train moving at 100 km/h. You throw a ball forward at 50 km/h relative to the train. A person on the platform sees the ball moving at 150 km/h. This is ordinary Newtonian addition of velocities — speeds simply add up.
 
-![Throwing a ball vs shining a flashlight from a moving train](/images/speed-of-causality-3.jpeg)
+![Train analogy for relative motion](/images/speed-of-causality-3.jpeg)
 
 Now suppose, instead of a ball, you shine a flashlight forward. The light travels at 299,792 km/s relative to you on the train. By Newtonian logic, the person on the platform should see the light moving at 299,792 km/s plus the train's speed.
 

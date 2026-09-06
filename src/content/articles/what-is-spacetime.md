@@ -49,7 +49,7 @@ For most of history, scientists — including Isaac Newton — treated space and
 
 This worked extraordinarily well. It explained falling apples, orbiting planets, and the tides. But by the late 1800s, cracks were beginning to show.
 
-![Newton's universe](/images/what-is-spacetime-2.jpeg)
+![Space and Time as Separate Entities](/images/what-is-spacetime-2.jpeg)
 
 ---
 
@@ -96,7 +96,7 @@ General Relativity adds another layer: **time also runs more slowly in stronger 
 
 Near a black hole — the most extreme gravitational object known — this effect becomes dramatic. An observer hovering just outside a black hole's **event horizon** (the point of no return) would experience time running at a tiny fraction of the rate measured by a distant observer.
 
-![Time Dilation](/images/what-is-spacetime-5.jpeg)
+![Time dilation near a black hole](/images/what-is-spacetime-5.jpeg)
 
 > ✅ **Established fact:** Time dilation has been measured precisely with atomic clocks on aircraft and satellites. It's not speculation — it's a verified, quantified effect that our technology depends on.
 
@@ -116,7 +116,7 @@ In September 2015, the **LIGO observatory** (Laser Interferometer Gravitational-
 
 ---
 
-## The Speed of Light as Spacetime's Speed Limit
+## The Speed Limit of Spacetime
 
 There is one absolute constant in spacetime: **nothing that has mass can reach or exceed the speed of light.** This isn't an engineering limitation we'll eventually overcome — it's a fundamental consequence of spacetime geometry.
 
@@ -126,7 +126,7 @@ This is why light doesn't experience the passage of time — and why reaching th
 
 ---
 
-## What Spacetime Tells Us About Gravity
+## What Spacetime Tells About Gravity
 
 Let's pull this all together with the most important takeaway:
 
@@ -140,7 +140,7 @@ This explains something Newton's gravity couldn't: **light bends around massive 
 
 ---
 
-## Open Questions: Where the Story Gets Speculative
+## Where the Story Gets Speculative
 
 Spacetime as described by General Relativity is one of the best-tested theories in science. But it is not the final word.
 

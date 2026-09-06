@@ -4,7 +4,7 @@ description: 'What if the past, present, and future all exist simultaneously —
 category: 'Spacetime & Gravity'
 heroImage: '/images/the-block-universe-0.jpeg'
 hashtags: ['Time', 'Spacetime', 'Relativity', 'Block Universe', 'Einstein']
-publishedAt: 2026-09-02
+publishedAt: 2026-09-04
 author: 'Cosmo Curated Editorial'
 seoKeywords: ['block universe theory explained', 'eternalism physics', 'does the past still exist', 'presentism vs eternalism', 'special relativity and time philosophy']
 faqs:
@@ -72,7 +72,7 @@ Because of their different velocities, the person walking away from you and the 
 
 Both "nows" are equally valid in Special Relativity. If the future event is already included in one person's present, then in what sense is it "not yet real"?
 
-> 🔬 **Not experimental claim:** The Rietdijk-Putnam argument (and Penrose's Andromeda variant) is a philosophical argument about what Special Relativity implies. The physics of Special Relativity is established. The conclusion — that the future is therefore "already real" — is a philosophical interpretation, not itself a testable prediction. It is, however, taken seriously as a logical consequence of the physics.
+> 🔬 **Not experimental claim:** The Andromeda Paradox is a philosophical argument about what Special Relativity implies. The physics of Special Relativity is established. The conclusion — that the future is therefore "already real" — is a philosophical interpretation, not itself a testable prediction. It is, however, taken seriously as a logical consequence of the physics.
 
 ---
 
@@ -90,13 +90,11 @@ In a Block Universe:
 
 Think of spacetime as a vast, four-dimensional block of ice. Every event — from the Big Bang to the far future — is a point or region in this block. The block doesn't change; it simply is. You, as a conscious observer, are a particular worldline threading through the block — a long, thin path through spacetime that represents your history. What you call "now" is just the point on that path where your experience currently is located.
 
-> 💡 **Worldline**: A worldline is the path an object traces through spacetime — the complete history of its position at every moment in time. In the Block Universe, every object has a fixed worldline that simply exists in the block.
+> 💡 **Worldline** is the path an object traces through spacetime — the complete history of its position at every moment in time. In the Block Universe, every object has a fixed worldline that simply exists in the block.
 
 ---
 
 ## The "Frozen River" Analogy
-
-Here is a useful (if imperfect) analogy.
 
 Think of a river. While you stand at the bank and watch, the water flows past. The water upstream "hasn't arrived yet"; the water downstream "has already passed." The flow of the river feels dynamic and real.
 
@@ -122,7 +120,7 @@ What the Block Universe does imply is that **your future, whatever it contains, 
 
 ---
 
-## The "Flow" of Time: An Open Problem
+## The "Flow" of Time: An Enduring Puzzle
 
 If all moments exist equally, where does the feeling of time flowing come from?
 
@@ -155,7 +153,7 @@ The Block Universe is not the only interpretation of what Special Relativity imp
 
 It's worth being clear about where the consensus lies.
 
-**Special Relativity and the relativity of simultaneity:** These are among the most precisely tested results in science. They are established fact, not hypothesis.
+**Special Relativity is an established fact.** The relativity of simultaneity is among the most rigorously verified results in physics.
 
 **The Block Universe as a philosophical interpretation:** This is where opinion divides. Many physicists are comfortable with the Block Universe as a natural reading of the formalism of Special Relativity. Others are agnostic, or argue that the question of what "really exists" lies beyond what physics alone can answer. Very few working physicists adopt a naive Presentism that ignores the relativity of simultaneity.
 
@@ -190,12 +188,8 @@ The Block Universe is not just an abstract puzzle for philosophers. It touches o
 
 These questions sit at the boundary between physics and philosophy, and they don't have settled answers. But they are not idle speculation. They follow from taking the mathematics of Special Relativity seriously as a description of reality.
 
-As the physicist Carlo Rovelli puts it: *"We think of time as flowing. But in the block universe, time does not flow — it simply is. The flow is in us."*
-
 Whether or not the block universe is the final word on the nature of time, engaging with it forces us to question assumptions so deep we barely notice we're making them. It is one of the great intellectual adventures that modern physics opens up — a reminder that the equations of nature have implications that go far beyond the laboratory.
 
 ---
 
-*Related articles on this site: [What is Spacetime?](/articles/what-is-spacetime) | [The Speed of Causality](/articles/the-speed-of-causality) | [The Arrow of Time](/articles/the-arrow-of-time)*
-
-*Further reading: For the physics foundations, see* Why Does E=mc²? *by Brian Cox and Jeff Forshaw. For the philosophy, see* The Philosophy of Time *edited by Robin Le Poidevin and Murray MacBeath, or* Time Reborn *by Lee Smolin (which argues against the block universe). Carlo Rovelli's* The Order of Time *is an accessible and beautifully written treatment.*
+*Further reading: For the philosophy, see* The Philosophy of Time *edited by Robin Le Poidevin and Murray MacBeath, or* Time Reborn *by Lee Smolin (which argues against the block universe). Carlo Rovelli's* The Order of Time *is an accessible and beautifully written treatment.*
