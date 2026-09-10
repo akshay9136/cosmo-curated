@@ -6,7 +6,7 @@ heroImage: '/images/arrow-of-time-0.jpeg'
 hashtags: ['Time', 'Entropy', 'Thermodynamics', 'Cosmology', 'Arrow of Time']
 publishedAt: 2026-09-04
 author: 'Cosmo Curated Editorial'
-seoKeywords: ['arrow of time explained', 'why does time flow forward', 'entropy and time', 'second law of thermodynamics', 'low entropy big bang', 'thermodynamic arrow of time']
+keywords: ['arrow of time explained', 'why does time flow forward', 'entropy and time', 'second law of thermodynamics', 'low entropy big bang', 'thermodynamic arrow of time']
 faqs:
   - question: 'What is the Arrow of Time?'
     answer: 'The Arrow of Time refers to the fact that time has a definite direction — the past is fixed, the future is open, and physical processes unfold in one direction only. An egg breaks but never spontaneously reassembles; heat flows from hot objects to cold ones, never the reverse. The challenge for physics is that the fundamental laws of nature are, with one near-negligible exception, perfectly symmetric in time — they work just as well run forwards or backwards. The arrow must therefore come from somewhere beyond the basic laws themselves.'

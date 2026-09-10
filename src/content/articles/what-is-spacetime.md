@@ -6,7 +6,7 @@ heroImage: '/images/what-is-spacetime-0.jpg'
 hashtags: ['Spacetime', 'Gravity', 'Relativity', 'Einstein', 'Physics']
 publishedAt: 2026-08-16
 author: 'Cosmo Curated Editorial'
-seoKeywords: ['what is spacetime', 'spacetime explained', 'Einstein general relativity', 'time dilation explained', 'gravitational waves LIGO']
+keywords: ['what is spacetime', 'spacetime explained', 'theory of general relativity', 'time dilation explained', 'gravitational waves LIGO']
 faqs:
   - question: 'What is spacetime?'
     answer: 'Spacetime is the unified four-dimensional fabric of the universe, combining three dimensions of space (length, width, height) with one dimension of time. Any event in the universe is located by four coordinates in spacetime. This concept was formalised by Einstein and the mathematician Hermann Minkowski in the early 20th century.'

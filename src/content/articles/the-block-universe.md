@@ -6,7 +6,7 @@ heroImage: '/images/the-block-universe-0.jpeg'
 hashtags: ['Time', 'Spacetime', 'Relativity', 'Block Universe', 'Einstein']
 publishedAt: 2026-09-04
 author: 'Cosmo Curated Editorial'
-seoKeywords: ['block universe theory explained', 'eternalism physics', 'does the past still exist', 'presentism vs eternalism', 'special relativity and time philosophy']
+keywords: ['block universe theory explained', 'eternalism physics', 'does the past still exist', 'presentism vs eternalism', 'special relativity and time']
 faqs:
   - question: 'What is the Block Universe Theory?'
     answer: 'The Block Universe (also called Eternalism) is a view of time implied by Einstein''s Special Theory of Relativity. It holds that past, present, and future events all exist equally and simultaneously within a four-dimensional spacetime. Nothing truly "happens" in any absolute sense — events simply exist at their spacetime coordinates. The apparent flow of time from past to future is, in this view, a feature of how conscious observers experience spacetime, not an objective property of the universe itself.'

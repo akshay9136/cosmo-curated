@@ -12,9 +12,7 @@ interface Props {
   /** Page type — controls og:type and article:* meta tags */
   type?: 'website' | 'article';
   publishedAt?: Date;
-  updatedAt?: Date;
   author?: string;
-  keywords?: string[];
   /** Additional JSON-LD schemas to inject (e.g. Article, BreadcrumbList) */
   schemas?: Record<string, unknown>[];
 }
@@ -25,9 +23,7 @@ const {
   image = '/cosmo_bg.jpg',
   type = 'website',
   publishedAt,
-  updatedAt,
   author = 'Cosmo Curated Editorial',
-  keywords = [],
   schemas = [],
 } = Astro.props;
 
@@ -94,7 +90,6 @@ const mainStyle = css({
     <!-- Primary meta -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
     <meta name="author" content={author} />
     <meta name="robots" content="index, follow" />
 

@@ -13,14 +13,9 @@ const articlesCollection = defineCollection({
     updatedAt: z.date().optional(),
     author: z.string().default('Cosmo Curated Editorial'),
     readingTime: z.number().optional(), // minutes; auto-derived if omitted
-    seoKeywords: z.array(z.string()).optional(),
+    keywords: z.array(z.string()).optional(),
     faqs: z
-      .array(
-        z.object({
-          question: z.string(),
-          answer: z.string(),
-        }),
-      )
+      .array(z.object({ question: z.string(), answer: z.string() }))
       .optional(),
   }),
 });
@@ -28,4 +23,3 @@ const articlesCollection = defineCollection({
 export const collections = {
   articles: articlesCollection,
 };
-

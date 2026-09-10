@@ -24,8 +24,8 @@ const {
   publishedAt,
   updatedAt,
   author = 'Cosmo Curated Editorial',
-  readingTime: articleReadingTime,
-  seoKeywords = [],
+  readingTime: _readingTime,
+  keywords = [],
   faqs,
 } = article.data;
 
@@ -41,8 +41,7 @@ if (typeof render === 'function') {
 
 // --- Reading time (auto-derive: ~240 wpm average) ---
 const wordCount = (article.body ?? '').trim().split(/\s+/).length;
-const readingTime =
-  articleReadingTime ?? Math.max(1, Math.round(wordCount / 240));
+const readingTime = _readingTime ?? Math.max(1, Math.round(wordCount / 240));
 
 // --- JSON-LD: Article schema ---
 const articleSchema = {
@@ -53,10 +52,7 @@ const articleSchema = {
   image: heroImage ? new URL(heroImage, Astro.site).toString() : undefined,
   datePublished: publishedAt.toISOString(),
   dateModified: (updatedAt ?? publishedAt).toISOString(),
-  author: {
-    '@type': 'Person',
-    name: author,
-  },
+  author: { '@type': 'Person', name: author },
   publisher: {
     '@type': 'Organization',
     name: 'Cosmo Curated',
@@ -70,7 +66,7 @@ const articleSchema = {
     '@type': 'WebPage',
     '@id': new URL(`/articles/${article.id}`, Astro.site).toString(),
   },
-  keywords: [...hashtags, ...seoKeywords].join(', '),
+  keywords: keywords.join(', '),
   articleSection: category,
   speakable: {
     '@type': 'SpeakableSpecification',
@@ -314,9 +310,7 @@ const tagsContainerStyle = css({
   image={heroImage}
   type="article"
   publishedAt={publishedAt}
-  updatedAt={updatedAt}
   author={author}
-  keywords={[...hashtags, ...seoKeywords]}
   schemas={schemas}
 >
   <article class={section()}>

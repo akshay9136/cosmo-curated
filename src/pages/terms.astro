@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import Layout from '@layouts/Layout.astro';
 import { css, cx } from 'styled-system/css';
 import { container } from 'styled-system/patterns';
@@ -53,14 +54,14 @@ const blockStyle = css({
 });
 
 const blockTitleStyle = cx(heading({ size: 'h3' }), css({ mb: 4 }));
-const blockBodyStyle = cx(bodyText(), css({ lineHeight: 'relaxed' }));
+const blockContentStyle = cx(bodyText(), css({ lineHeight: 'relaxed' }));
 
 const listStyle = css({
-  '& li': { mt: 2 },
   pl: 5,
   color: 'text.muted',
   lineHeight: 'relaxed',
   listStyleType: 'disc',
+  '& li': { mt: 2 },
 });
 
 const noteStyle = css({
@@ -99,7 +100,7 @@ const ctaRowStyle = css({ mt: 4, textAlign: 'center' });
       <div class={containerStyle}>
         <div class={blockStyle}>
           <h2 class={blockTitleStyle}>Acceptance of Terms</h2>
-          <p class={blockBodyStyle}>
+          <p class={blockContentStyle}>
             By accessing or using <strong style="color: #e4e4e7"
               >cosmocurated.com</strong
             > (the "Site"), you agree to be bound by these Terms of Use and our Privacy
@@ -110,7 +111,7 @@ const ctaRowStyle = css({ mt: 4, textAlign: 'center' });
 
         <div class={blockStyle}>
           <h2 class={blockTitleStyle}>About the Site</h2>
-          <p class={blockBodyStyle}>
+          <p class={blockContentStyle}>
             Cosmo Curated is an independent editorial platform providing
             articles, essays, and visual guides on astrophysics, cosmology, and
             related sciences. All content is intended for educational and
@@ -121,7 +122,7 @@ const ctaRowStyle = css({ mt: 4, textAlign: 'center' });
 
         <div class={blockStyle}>
           <h2 class={blockTitleStyle}>Intellectual Property</h2>
-          <p class={blockBodyStyle}>
+          <p class={blockContentStyle}>
             All content on this Site — including articles, graphics, the site
             design, logos, and code — is the property of Cosmo Curated or its
             content creators and is protected by intellectual property laws.
@@ -145,7 +146,7 @@ const ctaRowStyle = css({ mt: 4, textAlign: 'center' });
 
         <div class={blockStyle}>
           <h2 class={blockTitleStyle}>Permitted Use</h2>
-          <p class={blockBodyStyle}>
+          <p class={blockContentStyle}>
             You agree to use the Site only for lawful purposes. You must not:
           </p>
           <ul class={listStyle}>
@@ -169,7 +170,7 @@ const ctaRowStyle = css({ mt: 4, textAlign: 'center' });
 
         <div class={blockStyle}>
           <h2 class={blockTitleStyle}>Accuracy of Information</h2>
-          <p class={blockBodyStyle}>
+          <p class={blockContentStyle}>
             We strive to ensure our articles are scientifically accurate and
             up-to-date. However, astrophysics is a rapidly evolving field and
             some information may become outdated. Cosmo Curated makes no
@@ -186,7 +187,7 @@ const ctaRowStyle = css({ mt: 4, textAlign: 'center' });
 
         <div class={blockStyle}>
           <h2 class={blockTitleStyle}>External Links</h2>
-          <p class={blockBodyStyle}>
+          <p class={blockContentStyle}>
             The Site may contain links to external websites, research papers, or
             resources. These links are provided for convenience and
             informational purposes. Cosmo Curated does not endorse, control, or
@@ -198,7 +199,7 @@ const ctaRowStyle = css({ mt: 4, textAlign: 'center' });
 
         <div class={blockStyle}>
           <h2 class={blockTitleStyle}>Limitation of Liability</h2>
-          <p class={blockBodyStyle}>
+          <p class={blockContentStyle}>
             To the fullest extent permitted by law, Cosmo Curated and its
             contributors shall not be liable for any indirect, incidental,
             special, or consequential damages arising from your use of or
@@ -209,7 +210,7 @@ const ctaRowStyle = css({ mt: 4, textAlign: 'center' });
 
         <div class={blockStyle}>
           <h2 class={blockTitleStyle}>Changes to These Terms</h2>
-          <p class={blockBodyStyle}>
+          <p class={blockContentStyle}>
             We may update these Terms of Use from time to time. We will indicate
             the date of the most recent update at the top of this page.
             Continued use of the Site after changes are posted constitutes your
@@ -220,12 +221,12 @@ const ctaRowStyle = css({ mt: 4, textAlign: 'center' });
 
         <div class={blockStyle}>
           <h2 class={blockTitleStyle}>Contact</h2>
-          <p class={blockBodyStyle}>
+          <p class={blockContentStyle}>
             If you have questions about these Terms or wish to request
             permission to use our content, please reach out:
           </p>
           <p
-            class={blockBodyStyle}
+            class={blockContentStyle}
             style="margin-top: 0.75rem; color: #e4e4e7; font-weight: 500"
           >
             📧 hello@cosmocurated.com

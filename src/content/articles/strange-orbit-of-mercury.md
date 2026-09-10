@@ -6,7 +6,7 @@ heroImage: '/images/orbit-of-mercury-0.jpeg'
 hashtags: ['Mercury', 'General Relativity', 'Gravity', 'Spacetime', 'Einstein']
 publishedAt: 2026-09-08
 author: 'Cosmo Curated Editorial'
-seoKeywords: ['mercury orbit explained', 'perihelion precession of mercury', 'general relativity mercury', 'why does mercury orbit weirdly', 'einstein and mercury orbit']
+keywords: ['mercury orbit explained', 'perihelion precession of mercury', 'general relativity mercury', 'why does mercury orbit weirdly', 'einstein and mercury orbit']
 faqs:
   - question: 'Why is Mercury''s orbit considered strange?'
     answer: 'Mercury''s orbit is an ellipse, but that ellipse slowly rotates around the Sun over time — a phenomenon called perihelion precession. Most of this rotation is caused by gravitational tugs from other planets, which Newton''s laws predict accurately. But about 43 arcseconds per century remained unexplained by Newtonian mechanics alone, a tiny but stubbornly persistent discrepancy that puzzled astronomers for decades. Einstein''s General Theory of Relativity explained it precisely as a consequence of the Sun''s warping of spacetime.'

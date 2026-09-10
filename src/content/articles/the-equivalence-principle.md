@@ -6,7 +6,7 @@ heroImage: '/images/the-equivalence-0.jpeg'
 hashtags: ['Einstein', 'Gravity', 'Relativity', 'Equivalence Principle', 'Physics']
 publishedAt: 2026-08-20
 author: 'Cosmo Curated Editorial'
-seoKeywords: ['equivalence principle explained', 'why do astronauts feel weightless', 'gravity and acceleration same', 'does gravity slow time', 'gravitational lensing explained']
+keywords: ['equivalence principle explained', 'why do astronauts feel weightless', 'gravity and acceleration same', 'does gravity slow time', 'gravitational lensing explained']
 faqs:
   - question: 'What is the Equivalence Principle?'
     answer: 'The Equivalence Principle, formulated by Einstein in 1907, states that the effects of gravity are locally indistinguishable from the effects of acceleration. This means that inside a small enough room, no experiment can tell you whether you are sitting still on Earth or accelerating through space in a rocket at 9.8 m/s². This insight became the conceptual foundation of Einstein''s General Theory of Relativity.'

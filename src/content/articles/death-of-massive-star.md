@@ -2,11 +2,11 @@
 title: 'Death of a Massive Star'
 description: 'When a star much heavier than our Sun runs out of fuel, it does not quietly fade. It collapses in an instant and explodes with the energy of a billion suns — seeding the universe with the atoms that make up everything, including you.'
 category: 'Stars & Galaxies'
-heroImage: '/images/death-of-star-0.jpeg'
+heroImage: '/images/death-of-massive-star-0.jpeg'
 hashtags: ['Stars', 'Supernova', 'Black Holes', 'Neutron Stars', 'Astrophysics']
 publishedAt: 2026-09-06
 author: 'Cosmo Curated Editorial'
-seoKeywords: ['death of a massive star explained', 'how do stars die', 'supernova explained for beginners', 'what happens when a star explodes', 'neutron star vs black hole']
+keywords: ['death of a star explained', 'how do stars die', 'supernova explained for beginners', 'what happens when a star explodes', 'neutron star vs black hole']
 faqs:
   - question: 'What happens when a massive star dies?'
     answer: 'When a massive star — roughly eight or more times the mass of our Sun — exhausts its nuclear fuel, gravity wins a battle it has been losing for millions of years. The star''s iron core collapses catastrophically in less than a second, triggering a colossal explosion called a core-collapse supernova. The outer layers are blasted away into space at a significant fraction of the speed of light, enriching the surrounding gas with heavy elements. What is left behind is either an extraordinarily dense neutron star or, for the most massive progenitors, a black hole.'
@@ -34,7 +34,7 @@ To understand how a massive star dies, we first need to understand how it lives.
 
 A star is, at its core, a balancing act. **Gravity** pulls all of a star's gas inward — trying to crush it into an infinitely dense point. What stops this is the energy released by **nuclear fusion** at the star's centre, which generates an outward pressure that pushes back.
 
-![Nuclear fusion inside a star](/images/death-of-star-1.jpeg)
+![Nuclear fusion inside a star](/images/death-of-massive-star-1.jpeg)
 
 > 💡 **Nuclear fusion** is the process by which two light atomic nuclei are forced together under extreme heat and pressure to form a heavier nucleus, releasing energy in the process. It is the opposite of radioactive decay, which splits atoms. Stars are powered by fusion; the Sun converts about 600 million tonnes of hydrogen into helium every second.
 
@@ -56,7 +56,7 @@ As a massive star ages, it fuses heavier and heavier elements in successive shel
 - Further in: **neon** and then **oxygen** fuse into silicon and sulphur.
 - At the very centre: **silicon** fuses into **iron**.
 
-![A massive star in its final days](/images/death-of-star-2.jpeg)
+![A massive star in its final days](/images/death-of-massive-star-2.jpeg)
 
 Each transition to a heavier fuel is a reprieve: a new fuel source that buys more time against gravity. But the transitions come faster and faster. Hydrogen burning in the core takes millions of years. Carbon burning takes a few thousand years. Neon burning: about a year. Oxygen burning: a few months. Silicon burning — the final stage — takes about a week.
 
@@ -81,7 +81,7 @@ What happens next is the fastest cataclysm in astrophysics.
 
 The iron core, which has been growing to roughly 1.4 times the mass of our Sun, begins to collapse under its own weight. It falls inward at roughly a quarter of the speed of light. In less than a second — some models say in as little as **0.1 seconds** — a core the size of the Earth compresses to a sphere roughly 20 kilometres across.
 
-![The collapse of a massive star](/images/death-of-star-3.jpeg)
+![The collapse of a massive star](/images/death-of-massive-star-3.jpeg)
 
 The density reached is extraordinary: **nuclear density**, the density at which atomic nuclei are packed tightly together with no space between them. At this density, matter behaves in an entirely new way. Electrons are forced into protons, converting them into neutrons and neutrinos. The neutrons themselves resist further compression through a quantum mechanical effect called **neutron degeneracy pressure** — a fundamental property of matter at extreme densities.
 

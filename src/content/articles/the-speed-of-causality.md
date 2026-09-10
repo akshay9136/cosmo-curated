@@ -6,7 +6,7 @@ heroImage: '/images/speed-of-causality-0.jpeg'
 hashtags: ['Speed of Light', 'Special Relativity', 'Causality', 'Spacetime', 'Physics']
 publishedAt: 2026-08-24
 author: 'Cosmo Curated Editorial'
-seoKeywords: ['speed of light explained', 'why nothing travels faster than light', 'causality in physics', 'light cone spacetime', 'quantum entanglement faster than light']
+keywords: ['speed of light explained', 'why nothing travels faster than light', 'causality in physics', 'light cone spacetime', 'quantum entanglement faster than light']
 faqs:
   - question: 'Why can nothing travel faster than light?'
     answer: 'Nothing with mass can reach or exceed the speed of light because the energy required to accelerate it to that speed is literally infinite. This is not an engineering limitation but a fundamental geometric property of spacetime described by Einstein''s Special Theory of Relativity. As an object approaches the speed of light, the energy needed for each additional increment of speed grows without bound.'
