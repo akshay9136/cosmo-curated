@@ -1,0 +1,243 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { css, cx } from 'styled-system/css';
+import { container } from 'styled-system/patterns';
+import { section, heading, bodyText, button } from 'styled-system/recipes';
+
+const sectionStyle = cx(section(), css({ py: 16, bgColor: 'cosmos.900' }));
+
+const heroStyle = css({
+  maxW: '3xl',
+  textAlign: 'center',
+  mb: 16,
+  mx: 'auto',
+});
+
+const titleStyle = cx(heading({ size: 'h1' }), css({ mb: 4 }));
+
+const subtitleStyle = cx(
+  bodyText({ size: 'lg' }),
+  css({ color: 'cosmos.300' }),
+);
+
+const lastUpdatedStyle = css({
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 2,
+  px: 3,
+  py: 1,
+  borderRadius: 'full',
+  fontSize: 'sm',
+  color: 'accent.gold',
+  bgColor: 'rgba(249, 168, 37, 0.08)',
+  border: '1px solid',
+  borderColor: 'rgba(249, 168, 37, 0.2)',
+  mt: 6,
+});
+
+const containerStyle = css({
+  maxW: '2xl',
+  mx: 'auto',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 10,
+});
+
+const blockStyle = css({
+  padding: 8,
+  borderRadius: 'xl',
+  bgColor: 'rgba(255, 255, 255, 0.02)',
+  border: '1px solid',
+  borderColor: 'rgba(255, 255, 255, 0.06)',
+  transition: 'border-color 0.2s ease',
+});
+
+const blockTitleStyle = cx(heading({ size: 'h3' }), css({ mb: 4 }));
+const blockBodyStyle = cx(bodyText(), css({ lineHeight: 'relaxed' }));
+
+const listStyle = css({
+  '& li': { mt: 2 },
+  pl: 5,
+  color: 'text.muted',
+  lineHeight: 'relaxed',
+  listStyleType: 'disc',
+});
+
+const noteStyle = css({
+  mt: 4,
+  padding: 4,
+  borderRadius: 'lg',
+  borderColor: 'rgba(250, 168, 37, 0.15)',
+  border: '1px solid',
+  bgColor: 'rgba(250, 168, 37, 0.06)',
+  fontSize: 'sm',
+  color: 'cosmos.300',
+  lineHeight: 'relaxed',
+});
+
+const ctaRowStyle = css({ mt: 4, textAlign: 'center' });
+---
+
+<Layout
+  title="Terms of Use | Cosmo Curated"
+  description="Read the terms and conditions that govern your use of Cosmo Curated, our editorial astrophysics platform."
+>
+  <section class={sectionStyle}>
+    <div class={container()}>
+      <div class={heroStyle}>
+        <h1 class={titleStyle}>Terms of Use</h1>
+        <p class={subtitleStyle}>
+          By reading or using Cosmo Curated, you agree to the following terms.
+          They're written to be fair, clear, and human-readable.
+        </p>
+        <div class={lastUpdatedStyle}>
+          <span>📋</span>
+          <span>Last updated: Sep 2026</span>
+        </div>
+      </div>
+
+      <div class={containerStyle}>
+        <div class={blockStyle}>
+          <h2 class={blockTitleStyle}>Acceptance of Terms</h2>
+          <p class={blockBodyStyle}>
+            By accessing or using <strong style="color: #e4e4e7"
+              >cosmocurated.com</strong
+            > (the "Site"), you agree to be bound by these Terms of Use and our Privacy
+            Policy. If you do not agree with any part of these terms, please do not
+            use the Site.
+          </p>
+        </div>
+
+        <div class={blockStyle}>
+          <h2 class={blockTitleStyle}>About the Site</h2>
+          <p class={blockBodyStyle}>
+            Cosmo Curated is an independent editorial platform providing
+            articles, essays, and visual guides on astrophysics, cosmology, and
+            related sciences. All content is intended for educational and
+            informational purposes only. It is not a substitute for
+            peer-reviewed scientific publications.
+          </p>
+        </div>
+
+        <div class={blockStyle}>
+          <h2 class={blockTitleStyle}>Intellectual Property</h2>
+          <p class={blockBodyStyle}>
+            All content on this Site — including articles, graphics, the site
+            design, logos, and code — is the property of Cosmo Curated or its
+            content creators and is protected by intellectual property laws.
+          </p>
+          <ul class={listStyle}>
+            <li>
+              You may read, share links to, and quote brief excerpts of our
+              content for personal or educational use, with attribution.
+            </li>
+            <li>
+              You may <strong style="color: #e4e4e7">not</strong> reproduce full articles,
+              republish content commercially, or use our materials without explicit
+              written permission.
+            </li>
+            <li>
+              Attribution should include the article title, author name, and a
+              link back to the original URL.
+            </li>
+          </ul>
+        </div>
+
+        <div class={blockStyle}>
+          <h2 class={blockTitleStyle}>Permitted Use</h2>
+          <p class={blockBodyStyle}>
+            You agree to use the Site only for lawful purposes. You must not:
+          </p>
+          <ul class={listStyle}>
+            <li>
+              Scrape, crawl, or systematically extract content in bulk without
+              written permission
+            </li>
+            <li>
+              Use the Site to distribute spam, malware, or harmful content
+            </li>
+            <li>
+              Attempt to gain unauthorised access to any part of our
+              infrastructure
+            </li>
+            <li>
+              Misrepresent your affiliation with Cosmo Curated or impersonate
+              our editorial team
+            </li>
+          </ul>
+        </div>
+
+        <div class={blockStyle}>
+          <h2 class={blockTitleStyle}>Accuracy of Information</h2>
+          <p class={blockBodyStyle}>
+            We strive to ensure our articles are scientifically accurate and
+            up-to-date. However, astrophysics is a rapidly evolving field and
+            some information may become outdated. Cosmo Curated makes no
+            warranty — express or implied — regarding the completeness,
+            accuracy, or fitness for a particular purpose of any content.
+          </p>
+          <div class={noteStyle}>
+            ⚠️ &nbsp;Always consult primary scientific sources (NASA, ESA,
+            peer-reviewed journals) for critical research or professional use.
+            Our articles are a curated starting point, not a definitive
+            reference.
+          </div>
+        </div>
+
+        <div class={blockStyle}>
+          <h2 class={blockTitleStyle}>External Links</h2>
+          <p class={blockBodyStyle}>
+            The Site may contain links to external websites, research papers, or
+            resources. These links are provided for convenience and
+            informational purposes. Cosmo Curated does not endorse, control, or
+            take responsibility for the content, privacy policies, or practices
+            of any third-party sites. We encourage you to review the terms and
+            privacy policies of any external sites you visit.
+          </p>
+        </div>
+
+        <div class={blockStyle}>
+          <h2 class={blockTitleStyle}>Limitation of Liability</h2>
+          <p class={blockBodyStyle}>
+            To the fullest extent permitted by law, Cosmo Curated and its
+            contributors shall not be liable for any indirect, incidental,
+            special, or consequential damages arising from your use of or
+            inability to use the Site, even if we have been advised of the
+            possibility of such damages.
+          </p>
+        </div>
+
+        <div class={blockStyle}>
+          <h2 class={blockTitleStyle}>Changes to These Terms</h2>
+          <p class={blockBodyStyle}>
+            We may update these Terms of Use from time to time. We will indicate
+            the date of the most recent update at the top of this page.
+            Continued use of the Site after changes are posted constitutes your
+            acceptance of the updated terms. We recommend reviewing this page
+            periodically.
+          </p>
+        </div>
+
+        <div class={blockStyle}>
+          <h2 class={blockTitleStyle}>Contact</h2>
+          <p class={blockBodyStyle}>
+            If you have questions about these Terms or wish to request
+            permission to use our content, please reach out:
+          </p>
+          <p
+            class={blockBodyStyle}
+            style="margin-top: 0.75rem; color: #e4e4e7; font-weight: 500"
+          >
+            📧 hello@cosmocurated.com
+          </p>
+        </div>
+      </div>
+
+      <div class={ctaRowStyle}>
+        <a href="/" class={button({ variant: 'ghost', size: 'lg' })}>
+          ← Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
