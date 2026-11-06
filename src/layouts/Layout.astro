@@ -27,7 +27,10 @@ const {
   schemas = [],
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(
+  Astro.url.pathname.replace(/\/+$/, '') || '/',
+  Astro.site,
+);
 const ogImageURL = new URL(image, Astro.site).toString();
 
 // --- WebSite schema (on every page) ---
@@ -38,14 +41,6 @@ const websiteSchema = {
   url: Astro.site?.toString() ?? 'https://cosmocurated.com',
   description:
     'Handpicked deep dives into astrophysics, cosmology, and the science of the universe.',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${Astro.site}articles?category={search_term_string}`,
-    },
-    'query-input': 'required name=search_term_string',
-  },
 };
 
 // --- Organization schema (on every page — entity authority for AEO) ---
