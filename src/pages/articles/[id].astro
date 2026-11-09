@@ -26,7 +26,7 @@ const {
   author = 'Cosmo Curated Editorial',
   readingTime: _readingTime,
   keywords = [],
-  faqs,
+  faqs = [],
 } = article.data;
 
 // Render markdown content
@@ -101,29 +101,6 @@ const breadcrumbSchema = {
   ],
 };
 
-// --- JSON-LD: FAQPage (if faqs present) ---
-const faqSchema =
-  faqs && faqs.length > 0
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer,
-          },
-        })),
-      }
-    : null;
-
-const schemas = [
-  articleSchema,
-  breadcrumbSchema,
-  ...(faqSchema ? [faqSchema] : []),
-];
-
 const breadcrumbStyle = css({
   mb: 8,
   display: 'flex',
@@ -160,7 +137,7 @@ const readTimeStyle = css({
   gap: 1,
 });
 
-const titleStyle = cx(heading({ size: 'h2' }), css({ mb: 4 }));
+const titleStyle = cx(heading({ size: 'h1' }), css({ mb: 4 }));
 
 const heroImageWrapperStyle = css({
   borderRadius: 'xl',
@@ -183,16 +160,16 @@ const markdownContentStyle = css({
   lineHeight: 1.6,
   fontSize: 'lg',
   '& h1': {
-    fontSize: '2.25rem',
-    fontWeight: 'bold',
+    fontSize: '2.5rem',
+    fontWeight: 'semibold',
     fontFamily: 'heading',
     mt: 10,
     mb: 4,
     color: 'text.main',
   },
   '& h2': {
-    fontSize: '1.75rem',
-    fontWeight: 'bold',
+    fontSize: '2rem',
+    fontWeight: 'semibold',
     fontFamily: 'heading',
     mt: 8,
     mb: 4,
@@ -200,8 +177,8 @@ const markdownContentStyle = css({
     scrollMarginTop: '5rem',
   },
   '& h3': {
-    fontSize: '1.25rem',
-    fontWeight: 'bold',
+    fontSize: '1.5rem',
+    fontWeight: 'semibold',
     fontFamily: 'heading',
     mt: 6,
     mb: 3,
@@ -312,7 +289,7 @@ const tagsContainerStyle = css({
   type="article"
   publishedAt={publishedAt}
   author={author}
-  schemas={schemas}
+  schemas={[articleSchema, breadcrumbSchema]}
 >
   <article class={section()}>
     <div class={container({ maxW: '4xl', px: 0 })}>
@@ -390,6 +367,19 @@ const tagsContainerStyle = css({
       {/* Markdown Content */}
       <div class={markdownContentStyle}>
         {Content ? <Content /> : <p>Article content could not be loaded.</p>}
+        {
+          faqs.length > 0 && (
+            <section aria-labelledby="faq-heading">
+              <h2 id="faq-heading">Frequently asked questions</h2>
+              {faqs.map(({ question, answer }) => (
+                <>
+                  <h3>{question}</h3>
+                  <p>{answer}</p>
+                </>
+              ))}
+            </section>
+          )
+        }
       </div>
 
       {/* Hashtags */}

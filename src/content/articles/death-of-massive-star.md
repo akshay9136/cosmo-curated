@@ -8,16 +8,8 @@ publishedAt: 2026-09-06
 author: 'Cosmo Curated Editorial'
 keywords: ['death of a star explained', 'how do stars die', 'supernova explained for beginners', 'what happens when a star explodes', 'neutron star vs black hole']
 faqs:
-  - question: 'What happens when a massive star dies?'
-    answer: 'When a massive star — roughly eight or more times the mass of our Sun — exhausts its nuclear fuel, gravity wins a battle it has been losing for millions of years. The star''s iron core collapses catastrophically in less than a second, triggering a colossal explosion called a core-collapse supernova. The outer layers are blasted away into space at a significant fraction of the speed of light, enriching the surrounding gas with heavy elements. What is left behind is either an extraordinarily dense neutron star or, for the most massive progenitors, a black hole.'
-  - question: 'What is a supernova?'
-    answer: 'A supernova is one of the most energetic events in the universe — an explosion that briefly outshines an entire galaxy of hundreds of billions of stars. A core-collapse supernova (the type that ends a massive star''s life) releases roughly 10^44 joules of energy in a matter of seconds. About 99% of this energy is carried away by nearly massless particles called neutrinos; only about 1% goes into the visible explosion and the kinetic energy of the ejected material. Even so, that 1% is staggering.'
-  - question: 'What is a neutron star?'
-    answer: 'A neutron star is the compressed remnant of a massive star''s core after a supernova. It is one of the densest objects in the known universe: typically about 1.4 times the mass of the Sun crushed into a sphere only about 20 kilometres across — roughly the size of a city. A teaspoon of neutron star material would weigh approximately a billion tonnes on Earth. Neutron stars are so dense that protons and electrons are forced to merge into neutrons, giving the object its name.'
-  - question: 'How does a supernova create heavy elements?'
-    answer: 'Stars forge elements through nuclear fusion in their cores — hydrogen into helium, helium into carbon, and so on up to iron. During the supernova explosion itself, the extreme temperatures and densities create conditions for rapid nuclear reactions that build elements heavier than iron — things like silver, gold, iodine, and uranium — which cannot be made in any other stellar process. When the star explodes, all of these elements are scattered through space and eventually incorporated into new stars, planets, and living organisms.'
-  - question: 'Did the Sun go supernova?'
-    answer: 'No, and it never will. The Sun is not massive enough to end as a core-collapse supernova. At the end of its life (roughly 5 billion years from now), it will expand into a red giant and then gently shed its outer layers to form a glowing cloud called a planetary nebula, leaving behind a small, dense remnant called a white dwarf. Only stars with roughly eight or more times the Sun''s mass die in core-collapse supernovae.'
+  - question: 'Will the Sun go supernova?'
+    answer: 'The Sun has too little mass for its core to collapse in a supernova. In about five billion years it will expand into a red giant. It will eventually shed its outer layers, leaving its core behind as a white dwarf.'
 ---
 
 Every atom of iron in your blood, every calcium atom in your bones, every oxygen atom in each breath you draw — all of it was forged inside a star and scattered across space by one of the most violent events the universe produces.
@@ -113,7 +105,7 @@ In 1987, a supernova called **SN 1987A** exploded in the Large Magellanic Cloud,
 
 When the dust settles — literally, as the ejected material forms glowing clouds of gas and newly forged elements — two possible remnants can remain.
 
-## The Neutron Star
+### The Neutron Star
 
 For stars roughly 8 to 20 times the Sun's mass, the surviving core becomes a **neutron star: one of the most extreme objects in the known universe.**
 
@@ -128,7 +120,7 @@ Some neutron stars emit beams of radio waves or X-rays from their magnetic poles
 
 > ✅ **Established fact:** Hundreds of pulsars have been catalogued. Their extreme regularity makes them among the most precise natural clocks in the universe — in some cases rivalling atomic clocks in precision.
 
-## The Black Hole
+### The Black Hole: Total Collapse
 
 For the most massive progenitor stars — those above roughly 20 to 25 times the mass of the Sun, though the exact threshold depends on many factors — even neutron degeneracy pressure is not enough to resist gravity. The core collapses further, past the neutron star stage, into a **black hole: a point of infinite density (a singularity)** surrounded by an **event horizon**, the point of no return from which nothing — not even light — can escape.
 

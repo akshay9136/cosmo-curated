@@ -8,16 +8,8 @@ publishedAt: 2026-09-08
 author: 'Cosmo Curated Editorial'
 keywords: ['mercury orbit explained', 'perihelion precession of mercury', 'general relativity mercury', 'why does mercury orbit weirdly', 'einstein and mercury orbit']
 faqs:
-  - question: 'Why is Mercury''s orbit considered strange?'
-    answer: 'Mercury''s orbit is an ellipse, but that ellipse slowly rotates around the Sun over time — a phenomenon called perihelion precession. Most of this rotation is caused by gravitational tugs from other planets, which Newton''s laws predict accurately. But about 43 arcseconds per century remained unexplained by Newtonian mechanics alone, a tiny but stubbornly persistent discrepancy that puzzled astronomers for decades. Einstein''s General Theory of Relativity explained it precisely as a consequence of the Sun''s warping of spacetime.'
-  - question: 'What is perihelion precession?'
-    answer: 'Perihelion is the point in a planet''s elliptical orbit where it is closest to the Sun. "Precession" means that this closest point slowly drifts — it rotates around the Sun rather than returning to exactly the same spot each orbit. For Mercury, this drift amounts to a complete rotation of the orbit every roughly 225,000 years. Most of this precession is explained by the gravitational influence of other planets, but 43 arcseconds per century were left over — and only General Relativity accounts for them.'
-  - question: 'Did astronomers invent a planet to explain Mercury''s orbit?'
-    answer: 'Yes. In 1859 the French mathematician Urbain Le Verrier proposed that an undiscovered planet inside Mercury''s orbit — which he named Vulcan — was causing the gravitational tug responsible for the anomalous precession. Astronomers searched for Vulcan for decades; some even reported spurious detections. The planet was never found. Einstein''s General Relativity made Vulcan unnecessary by providing a physical explanation that required no new planet at all.'
-  - question: 'How did Einstein explain Mercury''s orbit?'
-    answer: 'In November 1915, while developing the field equations of General Relativity, Einstein calculated the precession of Mercury''s orbit predicted by his theory. The result was 43 arcseconds per century — exactly the anomalous amount left unexplained by Newton. Einstein reportedly was so excited he had heart palpitations. The calculation was the first successful prediction of a known anomaly by General Relativity, and it gave Einstein enormous confidence in his theory before the 1919 eclipse confirmed light bending.'
-  - question: 'Is Mercury''s orbit an important test of General Relativity?'
-    answer: 'Yes. The perihelion precession of Mercury was one of the three classical tests of General Relativity proposed by Einstein himself, alongside the bending of starlight by the Sun (confirmed in 1919) and gravitational redshift. Mercury''s precession is particularly significant because it was a known anomaly — a problem already sitting on the books — that Einstein''s theory solved with exact numerical precision, without adjusting any free parameters.'
+  - question: 'Why doesn’t Mercury fall into the Sun?'
+    answer: 'The Sun’s gravity continually bends Mercury’s path inward. Mercury also has enough sideways speed to keep missing the Sun as it falls, tracing an orbit. Precession slowly turns that orbit; it does not make Mercury spiral inward.'
 ---
 
 In November 1915, while finalising his General Theory of Relativity, Einstein applied his field equations to a concrete problem: the orbit of Mercury. The result was **43 arcseconds per century** — the precise amount by which Mercury's orbit had been observed to deviate from Newtonian predictions since Le Verrier first measured it in 1859.
@@ -94,7 +86,7 @@ For Earth, the relativistic precession is about **3.8 arcseconds per century** �
 
 ---
 
-## How Curved Spacetime Explains Mercury's Orbit
+## Gravity as Curved Spacetime
 
 The resolution came not from finding a new planet, but from rethinking what gravity is.
 

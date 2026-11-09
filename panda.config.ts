@@ -50,20 +50,20 @@ export default defineConfig({
           className: 'heading',
           base: {
             fontFamily: 'heading',
-            fontWeight: 'bold',
+            fontWeight: 600,
             color: 'text.main',
           },
           variants: {
             size: {
               h1: {
-                fontSize: '6xl',
+                fontSize: '5xl',
                 letterSpacing: 'tight',
               },
               h2: {
                 fontSize: '4xl',
                 letterSpacing: 'tight',
               },
-              h3: { fontSize: '2xl' },
+              h3: { fontSize: '3xl' },
             },
           },
           defaultVariants: { size: 'h2' },

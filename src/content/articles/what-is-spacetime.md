@@ -7,17 +7,6 @@ hashtags: ['Spacetime', 'Gravity', 'Relativity', 'Einstein', 'Physics']
 publishedAt: 2026-08-16
 author: 'Cosmo Curated Editorial'
 keywords: ['what is spacetime', 'spacetime explained', 'theory of general relativity', 'time dilation explained', 'gravitational waves LIGO']
-faqs:
-  - question: 'What is spacetime?'
-    answer: 'Spacetime is the unified four-dimensional fabric of the universe, combining three dimensions of space (length, width, height) with one dimension of time. Any event in the universe is located by four coordinates in spacetime. This concept was formalised by Einstein and the mathematician Hermann Minkowski in the early 20th century.'
-  - question: 'How does gravity relate to spacetime?'
-    answer: 'According to Einstein''s General Theory of Relativity, gravity is not a force between masses. Instead, massive objects warp the fabric of spacetime around them, and other objects — planets, light, and everything else — follow the straightest possible path through that curved geometry. What we perceive as gravitational attraction is the result of objects following these curved paths.'
-  - question: 'Does time really slow down at high speeds or near gravity?'
-    answer: 'Yes. This is called time dilation, and it is a real, measurable effect predicted by Special and General Relativity. Moving at high speeds slows time relative to a stationary observer. Being deeper in a gravitational field also slows time. Both effects are so real that GPS satellites must account for them to remain accurate — without corrections, GPS would drift by kilometres per day.'
-  - question: 'What are gravitational waves?'
-    answer: 'Gravitational waves are ripples in the fabric of spacetime caused by accelerating masses, such as two black holes or neutron stars merging. They travel at the speed of light. In September 2015, the LIGO observatory detected gravitational waves for the first time, directly confirming a prediction Einstein made in 1916. This discovery earned a Nobel Prize in Physics in 2017.'
-  - question: 'Why can''t anything travel faster than light?'
-    answer: 'The speed of light is the maximum speed at which anything can travel through spacetime — approximately 299,792 km/s. This limit is a fundamental consequence of spacetime geometry. As a massive object accelerates toward the speed of light, the energy required to accelerate it further approaches infinity. Reaching the speed of light would require literally infinite energy, making it physically impossible for any object with mass.'
 ---
 
 You probably think of space and time as completely separate things. Space is *where* you are — the room you're sitting in, the city outside your window, the vast emptiness between stars. Time is *when* things happen — seconds ticking on a clock, the Sun rising and setting, your life unfolding moment by moment.
@@ -136,7 +125,7 @@ Let's pull this all together with the most important takeaway:
 - Everything in the universe — planets, light, even you — follows the straightest possible path through curved spacetime.
 - We perceive those curved paths as the pull of gravity.
 
-This explains something Newton's gravity couldn't: **[light bends around massive objects](/articles/the-equivalence-principle#how-gravity-bends-light).** Since light has no mass, Newton's gravity shouldn't affect it at all. But General Relativity predicts that the path of light curves through curved spacetime — and this was confirmed in 1919 when astronomers measured starlight bending around the Sun during a solar eclipse. This observation was one of the first great experimental validations of General Relativity.
+This explains something Newton's gravity couldn't: **[light bends around massive objects](/articles/the-equivalence-principle#a-consequence-light-must-bend-in-gravity).** Since light has no mass, Newton's gravity shouldn't affect it at all. But General Relativity predicts that the path of light curves through curved spacetime — and this was confirmed in 1919 when astronomers measured starlight bending around the Sun during a solar eclipse. This observation was one of the first great experimental validations of General Relativity.
 
 ---
 

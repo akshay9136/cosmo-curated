@@ -7,17 +7,6 @@ hashtags: ['Time', 'Spacetime', 'Relativity', 'Block Universe', 'Einstein']
 publishedAt: 2026-09-04
 author: 'Cosmo Curated Editorial'
 keywords: ['block universe theory explained', 'eternalism physics', 'does the past still exist', 'presentism vs eternalism', 'special relativity and time']
-faqs:
-  - question: 'What is the Block Universe Theory?'
-    answer: 'The Block Universe (also called Eternalism) is a view of time implied by Einstein''s Special Theory of Relativity. It holds that past, present, and future events all exist equally and simultaneously within a four-dimensional spacetime. Nothing truly "happens" in any absolute sense — events simply exist at their spacetime coordinates. The apparent flow of time from past to future is, in this view, a feature of how conscious observers experience spacetime, not an objective property of the universe itself.'
-  - question: 'Does the Block Universe mean the future is fixed?'
-    answer: 'The Block Universe does not necessarily imply strict determinism, though it is compatible with it. In a block universe, all events at all times exist — but the question of whether those events are determined entirely by prior causes is a separate issue about the laws of physics. Quantum mechanics introduces genuine randomness, which complicates the picture. The Block Universe is a claim about the ontology of time (what exists), not necessarily about predictability.'
-  - question: 'Is the Block Universe a proven scientific theory?'
-    answer: 'The Block Universe is a philosophical interpretation of what Special Relativity implies about the nature of time. Special Relativity itself is extremely well-established science. However, the Block Universe is a philosophical conclusion drawn from it, not a directly testable prediction. Most physicists accept the physical results of Special Relativity but are divided on the philosophical interpretation. The Block Universe is a serious and widely discussed position in the philosophy of physics, not fringe speculation — but it is not the same kind of established fact as the equations of relativity themselves.'
-  - question: 'What is the relativity of simultaneity?'
-    answer: 'The relativity of simultaneity is a confirmed prediction of Special Relativity. Two observers moving at different velocities will disagree about whether two spatially separated events happened at the same time. One observer''s "now" is a different cross-section of spacetime than another observer''s "now." There is no single, universal "present moment" that applies to everyone. This is not a trick of perception — it follows directly from the mathematics of Special Relativity and has been confirmed experimentally.'
-  - question: 'What is the Andromeda Paradox?'
-    answer: 'The Andromeda Paradox (also known as the Rietdijk-Putnam argument, popularised by Roger Penrose) is a philosophical argument that uses the relativity of simultaneity to argue for the Block Universe. It shows that for any given moment on Earth, two observers moving at different velocities will disagree about what is happening "right now" in a distant galaxy. Since both observers'' "nows" are equally valid in Special Relativity, and since they extend to include different future events far away, this suggests that future events are, in some sense, already determined and real. It is a compelling argument, though its conclusions are disputed.'
 ---
 
 Imagine that the universe is not a film playing out frame by frame — a flickering present advancing through time — but more like a finished book: every page already written, every scene already there, waiting to be read. Past chapters don't cease to exist when you turn the page. Future chapters don't fail to exist because you haven't reached them yet.
@@ -183,7 +172,7 @@ The Block Universe is not just an abstract puzzle for philosophers. It touches o
 
 - **Is free will compatible with physics?** If your future already exists in the block, what does it mean to make a choice?
 - **What is consciousness?** If the flow of time is not an objective feature of the universe, where does the feeling of "now" come from?
-- **What is the relationship between time and causality?** In a block universe, causality is a pattern within the block — causes and effects both exist, but [causes come before effects](/articles/the-speed-of-causality#why-cause-and-effect-need-a-speed-limit) along each worldline.
+- **What is the relationship between time and causality?** In a block universe, causality is a pattern within the block — causes and effects both exist, but [causes come before effects](/articles/the-speed-of-causality#cause-and-effect-the-universal-rule) along each worldline.
 - **What are we, in time?** We are not points; we are worldlines — extended patterns through spacetime that have duration.
 
 These questions sit at the boundary between physics and philosophy, and they don't have settled answers. But they are not idle speculation. They follow from taking the mathematics of Special Relativity seriously as a description of reality.
