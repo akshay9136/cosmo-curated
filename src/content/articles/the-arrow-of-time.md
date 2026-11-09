@@ -21,7 +21,7 @@ So where does the arrow come from?
 
 ---
 
-## Laws That Don't Care About Direction
+## Laws That Don't Have Direction
 
 Let's make the puzzle concrete.
 

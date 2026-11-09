@@ -158,7 +158,7 @@ The astrophysicist Carl Sagan expressed it this way: *"The nitrogen in our DNA, 
 
 ---
 
-## Massive Star Death at a Glance
+## Stellar Death at a Glance
 
 | Concept | What it means |
 |---|---|

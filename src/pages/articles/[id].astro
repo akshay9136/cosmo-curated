@@ -30,14 +30,23 @@ const {
 } = article.data;
 
 // Render markdown content
-let Content;
+let rendered: Awaited<ReturnType<typeof render>> | undefined;
 if (typeof render === 'function') {
-  const rendered = await render(article);
-  Content = rendered.Content;
+  rendered = await render(article);
 } else if (typeof (article as any).render === 'function') {
-  const rendered = await (article as any).render();
-  Content = rendered.Content;
+  rendered = await (article as any).render();
 }
+
+const { Content, headings = [] } = rendered ?? {};
+const sectionLinks = headings.filter(({ slug, text }) => slug && text);
+const faqHeading = {
+  slug: headings.some(({ slug }) => slug === 'faq-heading')
+    ? 'article:faq-heading'
+    : 'faq-heading',
+  text: 'Frequently asked questions',
+  depth: 2,
+};
+if (faqs.length > 0) sectionLinks.push(faqHeading);
 
 // --- Reading time (auto-derive: ~240 wpm average) ---
 const wordCount = (article.body ?? '').trim().split(/\s+/).length;
@@ -139,6 +148,37 @@ const readTimeStyle = css({
 
 const titleStyle = cx(heading({ size: 'h1' }), css({ mb: 4 }));
 
+const contentsStyle = css({
+  mb: 8,
+  bgColor: 'cosmos.800',
+  border: '1px solid',
+  borderColor: 'cosmos.700',
+  borderRadius: 'lg',
+  '& summary': {
+    px: 4,
+    py: 3,
+    cursor: 'pointer',
+    fontWeight: 'semibold',
+    color: 'text.main',
+  },
+  '& summary::marker': { color: 'accent.purple' },
+  '& ul': {
+    px: 4,
+    py: 2,
+    borderTop: '1px solid',
+    borderColor: 'cosmos.700',
+    listStyleType: 'none',
+  },
+  '& a': {
+    display: 'block',
+    py: 2,
+    color: 'text.muted',
+    textDecoration: 'underline',
+    textUnderlineOffset: 4,
+    _hover: { color: 'accent.purple' },
+  },
+});
+
 const heroImageWrapperStyle = css({
   borderRadius: 'xl',
   overflow: 'hidden',
@@ -159,6 +199,9 @@ const markdownContentStyle = css({
   fontFamily: 'body',
   lineHeight: 1.6,
   fontSize: 'lg',
+  '& :is(h1, h2, h3, h4, h5, h6)[id]': {
+    scrollMarginTop: '5rem',
+  },
   '& h1': {
     fontSize: '2.5rem',
     fontWeight: 'semibold',
@@ -174,7 +217,6 @@ const markdownContentStyle = css({
     mt: 8,
     mb: 4,
     color: 'text.main',
-    scrollMarginTop: '5rem',
   },
   '& h3': {
     fontSize: '1.5rem',
@@ -347,6 +389,31 @@ const tagsContainerStyle = css({
         </p>
       </div>
 
+      {
+        sectionLinks.length > 0 && (
+          <nav
+            aria-label="On this page"
+            class={contentsStyle}
+            data-article-contents
+          >
+            <details>
+              <summary>&nbsp;On this page</summary>
+              <ul role="list">
+                {sectionLinks.map(({ slug, text, depth }) => (
+                  <li
+                    class={
+                      depth > 2 ? css({ pl: 4, fontSize: 'sm' }) : undefined
+                    }
+                  >
+                    <a href={`#${encodeURIComponent(slug)}`}>{text}</a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </nav>
+        )
+      }
+
       {/* Hero Image */}
       {
         heroImage && (
@@ -369,8 +436,8 @@ const tagsContainerStyle = css({
         {Content ? <Content /> : <p>Article content could not be loaded.</p>}
         {
           faqs.length > 0 && (
-            <section aria-labelledby="faq-heading">
-              <h2 id="faq-heading">Frequently asked questions</h2>
+            <section aria-labelledby={faqHeading.slug}>
+              <h2 id={faqHeading.slug}>{faqHeading.text}</h2>
               {faqs.map(({ question, answer }) => (
                 <>
                   <h3>{question}</h3>
@@ -395,3 +462,11 @@ const tagsContainerStyle = css({
     </div>
   </article>
 </Layout>
+
+<style is:global>
+  @media (prefers-reduced-motion: no-preference) {
+    html:has([data-article-contents]) {
+      scroll-behavior: smooth;
+    }
+  }
+</style>
