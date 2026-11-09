@@ -62,7 +62,7 @@ Each transition to a heavier fuel is a reprieve: a new fuel source that buys mor
 
 ---
 
-## The Iron Problem
+## Iron Fusion Drains Energy
 
 Iron is special — and not in a good way for a star.
 
@@ -75,7 +75,7 @@ Gravity, which has been waiting millions of years, wins instantaneously.
 
 ---
 
-## The Collapse: 0.1 Seconds to Catastrophe
+## Core Collapse Triggers a Supernova
 
 What happens next is the fastest cataclysm in astrophysics.
 
@@ -93,7 +93,7 @@ This is a **core-collapse supernova**.
 
 ---
 
-## The Neutrino Flood
+## Neutrinos and Supernova Energy
 
 Here is one of the most remarkable facts about supernovae — and one of the hardest to intuitively grasp.
 
@@ -166,7 +166,7 @@ The astrophysicist Carl Sagan expressed it this way: *"The nitrogen in our DNA, 
 
 ---
 
-## A Quick Summary
+## Massive Star Death at a Glance
 
 | Concept | What it means |
 |---|---|
@@ -181,7 +181,7 @@ The astrophysicist Carl Sagan expressed it this way: *"The nitrogen in our DNA, 
 
 ---
 
-## Why This Matters
+## How Supernovae Shape Galaxies
 
 The death of a massive star is not just a spectacular event at the end of a star's life. It is one of the universe's primary mechanisms for:
 

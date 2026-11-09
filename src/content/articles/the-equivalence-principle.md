@@ -40,7 +40,7 @@ Einstein wanted to understand gravity more deeply. And his starting point wasn't
 
 ---
 
-## The Happiest Thought
+## Happiest Thought of Einstein
 
 In 1907, two years after his Special Theory of Relativity, Einstein was sitting in the patent office in Bern when a thought struck him. He later described it as "the happiest thought of my life."
 
@@ -56,7 +56,7 @@ This is not a trick. Their weightlessness is real and total, even though Earth's
 
 ---
 
-## Gravity and Acceleration
+## How Acceleration Mimics Gravity
 
 Einstein's key insight was the flip side of this observation. If gravity and free fall cancel out perfectly, then gravity and acceleration must be, in some deep sense, **the same thing.**
 
@@ -80,7 +80,7 @@ No experiment you perform inside either room — measuring forces, timing pendul
 
 ---
 
-## The "Locally" Caveat
+## Why It Only Holds Locally
 
 There's a subtlety Einstein was careful about: the equivalence only holds locally — in a small enough region of space.
 
@@ -88,7 +88,7 @@ If you're in a very large room on Earth, and you release two balls at exactly th
 
 In a uniformly accelerating rocket, two balls released side by side would fall perfectly parallel — no convergence. This is why physicists say "the equivalence is local" — it holds perfectly in a small enough region, but breaks down over large distances.
 
-The full General Theory of Relativity goes beyond the local equivalence and accounts for these tidal effects as the **curvature of spacetime.**
+The full General Theory of Relativity goes beyond the local equivalence and accounts for these tidal effects as the **[curvature of spacetime](/articles/what-is-spacetime#how-curved-spacetime-explains-gravity).**
 
 > ⚠️ **A note on precision:** The Equivalence Principle is a cornerstone of General Relativity, but it's also an ongoing area of experimental testing. So far, no experiment has detected any violation of it.
 
@@ -146,7 +146,7 @@ The Equivalence Principle tells you locally what gravity feels like. General Rel
 
 ---
 
-## A Quick Summary
+## Key Ideas of the Equivalence Principle
 
 | Concept | What it means |
 |---|---|
@@ -159,14 +159,14 @@ The Equivalence Principle tells you locally what gravity feels like. General Rel
 
 ---
 
-## Why This Matters
+## Applications and Tests
 
 The Equivalence Principle might seem like an abstract philosophical point — a clever observation about elevators and rockets. But its consequences are everywhere:
 
 - **GPS and navigation** depend on corrections for gravitational time dilation derived from this principle.
 - **Gravitational lensing** is now a standard tool in cosmology, used to map dark matter and observe the earliest galaxies in the universe.
 - **Tests of the Equivalence Principle** are among the most precise experiments ever conducted — any tiny violation would be a sign of new physics beyond General Relativity.
-- **Black holes and neutron stars**, the most extreme gravitational environments known, are described entirely by a theory whose foundations rest on this principle.
+- **[Black holes and neutron stars](/articles/death-of-massive-star#neutron-stars-and-black-holes)**, the most extreme gravitational environments known, are described entirely by a theory whose foundations rest on this principle.
 
 Einstein's "happiest thought" was not just a beautiful idea. It was a key that unlocked the geometry of the cosmos — and we are still using it today.
 

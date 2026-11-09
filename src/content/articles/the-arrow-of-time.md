@@ -46,7 +46,7 @@ The resolution to this contradiction is one of the great achievements of 19th- a
 
 ---
 
-## The Measure of Disorder
+## Entropy: The Measure of Disorder
 
 **Entropy** is a word that physicists use to measure something precise: the number of ways a system can be arranged internally while still looking the same from the outside.
 
@@ -84,7 +84,7 @@ This is why:
 
 ---
 
-## The Thermodynamic Arrow in Everyday Life
+## The Arrow of Time in Everyday Life
 
 It is worth pausing to appreciate how many apparently separate "arrows" in everyday life are really the same arrow — entropy increase — in different guises.
 
@@ -150,7 +150,7 @@ CP violation is real and experimentally confirmed. It is, however, extremely sma
 
 ---
 
-## What Happens at the End?
+## The Heat Death of the Universe
 
 If entropy always increases, where does it end?
 
@@ -162,7 +162,7 @@ This fate is projected to be incomprehensibly far in the future — on timescale
 
 ---
 
-## A Quick Summary
+## Key Concepts Behind the Arrow of Time
 
 | Concept | What it means |
 |---|---|
@@ -176,7 +176,7 @@ This fate is projected to be incomprehensibly far in the future — on timescale
 
 ---
 
-## Why This Matters
+## Why the Arrow of Time Matters
 
 The Arrow of Time underpins almost everything we consider fundamental about existence:
 

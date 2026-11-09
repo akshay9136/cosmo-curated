@@ -104,10 +104,9 @@ This is a question worth answering directly, because the answer is both practica
 
 In Special Relativity, as an object with mass accelerates, it gains what physicists call **relativistic momentum** — and the faster it goes, the more energy it takes to accelerate it further. As its speed approaches the speed of light, the energy required to go any faster approaches infinity.
 
-This is not an engineering problem. No sufficiently powerful engine would solve it. It is a fundamental geometric feature of spacetime. The equation is exact:
+This is not an engineering problem. No sufficiently powerful engine would solve it. It is a fundamental geometric feature of spacetime. The energy required to push a massive object to exactly the speed of light is literally infinite.
 
-The energy required to push a massive object to exactly the speed of light is literally infinite. There is no finite amount of energy in the universe sufficient to do it.
-
+There is no finite amount of energy in the universe sufficient to do it.
 Massless particles like photons sidestep this by having zero mass — they were never going slower to begin with. But anything with mass is barred from reaching the limit entirely.
 
 > ⚠️ **Common misconception:** People sometimes wonder whether we could just "build a better rocket." No. The energy barrier is not technological — it is mathematical. As you approach the speed of light, each extra km/s requires exponentially more energy. The limit is geometrically fundamental, not practically inconvenient.
@@ -116,9 +115,7 @@ Massless particles like photons sidestep this by having zero mass — they were 
 
 ## What About Quantum Entanglement?
 
-At this point, many readers have heard something that sounds like a counterexample: **quantum entanglement**.
-
-When two particles are quantum mechanically entangled, measuring one of them instantly affects the state of the other — even if they are on opposite sides of the universe. Doesn't this send information faster than light?
+At this point, many readers have heard something that sounds like a counterexample: **quantum entanglement**. When two particles are quantum mechanically entangled, measuring one of them instantly affects the state of the other — even if they are on opposite sides of the universe. Doesn't this send information faster than light?
 
 No. And this is one of the most important "no" answers in physics.
 
@@ -158,7 +155,7 @@ The speed of light thus acts as a kind of guardian: it ensures that all observer
 
 ---
 
-## A Quick Summary
+## Key Concepts Behind the Cosmic Speed Limit
 
 | Concept | What it means |
 |---|---|
@@ -172,7 +169,7 @@ The speed of light thus acts as a kind of guardian: it ensures that all observer
 
 ---
 
-## Why This Matters
+## Why the Speed of Causality Matters
 
 The speed of causality is not an engineering obstacle waiting to be engineered around. It is the structural backbone of the universe's timeline.
 

@@ -44,7 +44,7 @@ In a perfectly Newtonian universe with only two bodies — one planet and one Su
 
 ---
 
-## The Problem: Mercury's Orbit
+## Mercury's Perihelion Precession
 
 Mercury is the innermost planet of our Solar System, and it is also the fastest: it completes one orbit every 88 Earth days. Because it is so close to the Sun, it moves at extraordinary speed — up to 59 kilometres per second at perihelion — and it is more strongly affected by the Sun's gravity than any other planet.
 
@@ -94,13 +94,13 @@ For Earth, the relativistic precession is about **3.8 arcseconds per century** �
 
 ---
 
-## Gravity as Curved Spacetime
+## How Curved Spacetime Explains Mercury's Orbit
 
 The resolution came not from finding a new planet, but from rethinking what gravity is.
 
 **Newton's gravity is a force**: every mass attracts every other mass across empty space, with a strength that falls off as the square of the distance. It is a spectacularly successful description — but Newton himself never explained the mechanism. How does the Sun reach across 77 million kilometres of empty space and pull Mercury?
 
-Einstein's answer, arrived at through the Equivalence Principle and a decade of mathematical effort, is fundamentally different. Gravity is not a force acting across space. It is the **curvature of spacetime** — the four-dimensional fabric of the universe — caused by the presence of mass and energy. Objects don't get pulled by gravity; they follow the straightest possible paths through a curved geometry.
+Einstein's answer, arrived at through the [Equivalence Principle](/articles/the-equivalence-principle) and a decade of mathematical effort, is fundamentally different. Gravity is not a force acting across space. It is the **curvature of spacetime** — the four-dimensional fabric of the universe — caused by the presence of mass and energy. Objects don't get pulled by gravity; they follow the straightest possible paths through a curved geometry.
 
 > 💡 **Spacetime** is the combination of three dimensions of space and one dimension of time into a single four-dimensional framework. Einstein showed that space and time are not separate and absolute, but interwoven and relative to the observer. For more on this foundation, see our article [What is Spacetime?](/articles/what-is-spacetime).
 
@@ -110,7 +110,7 @@ For most of the Solar System, the approximation is so good it is indistinguishab
 
 ---
 
-## The Bigger Picture
+## Early Tests of General Relativity
 
 By November 1915, **General Relativity** was still an unconfirmed theory. Einstein believed it deeply — his intuition about its mathematical elegance and internal consistency was strong — but science requires evidence, not belief.
 
@@ -122,7 +122,7 @@ When the 1919 eclipse expedition confirmed that starlight bent around the Sun by
 
 ---
 
-## A Quick Summary
+## Mercury's Orbit at a Glance
 
 | Concept | What it means |
 |---|---|

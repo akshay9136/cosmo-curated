@@ -26,7 +26,7 @@ But one of the most profound discoveries in the history of science is that **spa
 
 ---
 
-## The Stage of the Universe
+## The Four Dimensions of Spacetime
 
 Before we get into relativity and warped geometry, let's start somewhere familiar.
 
@@ -40,14 +40,14 @@ This is the essence of spacetime: any event in the universe can be pinpointed by
 
 ---
 
-## Newton's Universe: Space and Time are Separate
+## Absolute Space and Time in Newtonian Physics
 
 For most of history, scientists — including Isaac Newton — treated space and time as completely independent and fixed. In Newton's worldview:
 
 - **Space** was an infinite, rigid container — the same everywhere, for everyone.
 - **Time** ticked at the same rate universally — a clock on Earth would always agree with a clock on Mars or in a distant galaxy.
 
-This worked extraordinarily well. It explained falling apples, orbiting planets, and the tides. But by the late 1800s, cracks were beginning to show.
+This worked extraordinarily well. It explained falling apples, orbiting planets, and the tides. But by the late 1800s, cracks were beginning to show. Astronomers were unable to explain a small drift in [Mercury's orbit](/articles/strange-orbit-of-mercury#mercurys-perihelion-precession), even after accounting for the gravitational pull of Jupiter and other planets.
 
 ![Space and Time as Separate Entities](/images/what-is-spacetime-2.jpeg)
 
@@ -68,7 +68,7 @@ In 1908, the mathematician Hermann Minkowski formalised this by merging them exp
 
 ---
 
-## An Analogy: The Stretchy Sheet
+## The Rubber Sheet Analogy
 
 A popular and useful analogy is to imagine spacetime as a large, taut rubber sheet stretched flat.
 
@@ -84,7 +84,7 @@ The Earth orbits the Sun not because the Sun pulls on it across empty space, but
 
 ---
 
-## Time Dilation: Time Actually Slows Down
+## Time Dilation From Motion and Gravity
 
 Here's where things get genuinely mind-bending — and where the rubber sheet analogy starts to fall short, because it doesn't show you what happens to *time*.
 
@@ -116,7 +116,7 @@ In September 2015, the **LIGO observatory** (Laser Interferometer Gravitational-
 
 ---
 
-## The Speed Limit of Spacetime
+## The Speed of Light as a Cosmic Limit
 
 There is one absolute constant in spacetime: **nothing that has mass can reach or exceed the speed of light.** This isn't an engineering limitation we'll eventually overcome — it's a fundamental consequence of spacetime geometry.
 
@@ -136,11 +136,11 @@ Let's pull this all together with the most important takeaway:
 - Everything in the universe — planets, light, even you — follows the straightest possible path through curved spacetime.
 - We perceive those curved paths as the pull of gravity.
 
-This explains something Newton's gravity couldn't: **light bends around massive objects.** Since light has no mass, Newton's gravity shouldn't affect it at all. But General Relativity predicts that the path of light curves through curved spacetime — and this was confirmed in 1919 when astronomers measured starlight bending around the Sun during a solar eclipse. This observation was one of the first great experimental validations of General Relativity.
+This explains something Newton's gravity couldn't: **[light bends around massive objects](/articles/the-equivalence-principle#how-gravity-bends-light).** Since light has no mass, Newton's gravity shouldn't affect it at all. But General Relativity predicts that the path of light curves through curved spacetime — and this was confirmed in 1919 when astronomers measured starlight bending around the Sun during a solar eclipse. This observation was one of the first great experimental validations of General Relativity.
 
 ---
 
-## Where the Story Gets Speculative
+## The Limits of General Relativity
 
 Spacetime as described by General Relativity is one of the best-tested theories in science. But it is not the final word.
 
@@ -154,7 +154,7 @@ Candidates such as **string theory** and loop quantum gravity propose that space
 
 ---
 
-## A Quick Summary
+## Key Concepts in Spacetime and Relativity
 
 | Concept | What it means |
 |---|---|
@@ -167,7 +167,7 @@ Candidates such as **string theory** and loop quantum gravity propose that space
 
 ---
 
-## Why This Matters
+## Spacetime in GPS and Astronomy
 
 Spacetime isn't just an abstract idea for theoretical physicists. It has real, practical consequences:
 

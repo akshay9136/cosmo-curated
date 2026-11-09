@@ -40,7 +40,7 @@ This feels obvious and natural. It's deeply embedded in how we experience being 
 
 ---
 
-## What Special Relativity Does to "Now"
+## The Relativity of Simultaneity
 
 To understand the Block Universe, you first need to understand one of Special Relativity's most disorienting predictions: **the relativity of simultaneity**.
 
@@ -94,7 +94,7 @@ Think of spacetime as a vast, four-dimensional block of ice. Every event — fro
 
 ---
 
-## The "Frozen River" Analogy
+## The Frozen River Analogy
 
 Think of a river. While you stand at the bank and watch, the water flows past. The water upstream "hasn't arrived yet"; the water downstream "has already passed." The flow of the river feels dynamic and real.
 
@@ -120,7 +120,7 @@ What the Block Universe does imply is that **your future, whatever it contains, 
 
 ---
 
-## The "Flow" of Time: An Enduring Puzzle
+## Why Does Time Feel Like It Flows?
 
 If all moments exist equally, where does the feeling of time flowing come from?
 
@@ -163,7 +163,7 @@ The physicist Hermann Minkowski — who first formalised spacetime geometry in 1
 
 ---
 
-## A Quick Summary
+## Key Ideas of the Block Universe
 
 | Concept | What it means |
 |---|---|
@@ -177,13 +177,13 @@ The physicist Hermann Minkowski — who first formalised spacetime geometry in 1
 
 ---
 
-## Why This Matters
+## Free Will and Causality
 
 The Block Universe is not just an abstract puzzle for philosophers. It touches on some of the most profound questions we can ask:
 
 - **Is free will compatible with physics?** If your future already exists in the block, what does it mean to make a choice?
 - **What is consciousness?** If the flow of time is not an objective feature of the universe, where does the feeling of "now" come from?
-- **What is the relationship between time and causality?** In a block universe, causality is a pattern within the block — causes and effects both exist, but causes come before effects along each worldline.
+- **What is the relationship between time and causality?** In a block universe, causality is a pattern within the block — causes and effects both exist, but [causes come before effects](/articles/the-speed-of-causality#why-cause-and-effect-need-a-speed-limit) along each worldline.
 - **What are we, in time?** We are not points; we are worldlines — extended patterns through spacetime that have duration.
 
 These questions sit at the boundary between physics and philosophy, and they don't have settled answers. But they are not idle speculation. They follow from taking the mathematics of Special Relativity seriously as a description of reality.
